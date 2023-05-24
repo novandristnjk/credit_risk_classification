@@ -22,7 +22,7 @@ Referensi :
 2. Memilih model terbaik berdasarkan hasil evaluasi.
 
 ## Data Understanding
-Data yang digunakan dalam proyek ini adalah dataset Credit Risk yang berisi informasi tentang pengajuan pinjaman dan status kredit. Dataset ini dapat diunduh dari [kaggle](https://www.kaggle.com/datasets/laotse/credit-risk-dataset/download?datasetVersionNumber=1.).
+Data yang digunakan dalam proyek ini adalah dataset Credit Risk yang berisi informasi tentang pengajuan pinjaman dan status kredit. Dataset ini dapat diunduh dari [kaggle](https://www.kaggle.com/datasets/laotse/credit-risk-dataset)
 
 Variabel-variabel dalam dataset Credit Risk meliputi:
 | Variabel | Deskripsi |

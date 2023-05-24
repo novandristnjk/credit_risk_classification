@@ -1,8 +1,8 @@
 # Laporan Proyek Machine Learning - Novandri Sitinjak
 
 ## Latar Belakang
-
-        Perkembangan perekonomian suatu negara dipengaruhi kondisi industri pendukung. Industri perbankan merupakan salah satu industri yang sangat berperan dalam mendukung perkembangan ekonomi, yaitu menghimpun dan menyalurkan dana. Penyaluran dana dalam bentuk kredit akan meningkatkan perkem bangan industri pada sektor riil yang mendukung pertumbuhan perekonomian negara dan mengurangi tingkat pengangguran.
+    Perkembangan perekonomian suatu negara dipengaruhi kondisi industri pendukung. Industri perbankan merupakan salah satu industri yang sangat berperan dalam mendukung perkembangan ekonomi, yaitu menghimpun dan menyalurkan dana. Penyaluran dana dalam bentuk kredit akan meningkatkan perkem bangan industri pada sektor riil yang mendukung pertumbuhan perekonomian negara dan mengurangi tingkat pengangguran.
+        
         Risiko yang dihadapi dalam kegiatan penyaluran kredit adalah terjadinya kredit bermasalah Kredit berkembang menjadi bermasalah dapat disebabkan oleh berbagai hal yang berasal dari nasabah, kondisi eksternal, dan pemberi kredit. Evaluasi kredit yang akurat menjadi sangat penting untuk meminimalkan risiko kredit yang tidak menguntungkan bagi lembaga keuangan. Oleh karena itu, pengembangan model klasifikasi yang dapat mengidentifikasi risiko kredit dengan tepat sangatlah relevan dan penting.
 
 Referensi :

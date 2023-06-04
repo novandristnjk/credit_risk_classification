@@ -1,5 +1,7 @@
 # Laporan Proyek Machine Learning - Novandri Sitinjak
 
+![fdddd](https://github.com/novandristnjk/laporan/assets/110597813/5b080025-69a4-44d0-b800-4a520790c97b)
+
 ## Latar Belakang
 Bank merupakan lembaga intermediasi yang bertugas menerima simpanan dari nasabah dan meminjamkannya kepada nasabah (unit ekonomi) lain yang membutuhkan dana. Atas simpanan masyarakat, bank memberikan imbalan berupa bunga. Demikian pula, atas pemberian pinjaman (kredit) bank mengenakan bunga kepada para peminjam. Dengan kata lain bank sebagai lembaga keuangan yang berfungsi menghimpun dan menyalurkan dana dari dan ke masyarakat untuk meningkatkan pelayanan kepada para nasabah tanpa mengabaikan etika perbankan.
 

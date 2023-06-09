@@ -61,6 +61,7 @@ Variabel-variabel dalam dataset Credit Risk meliputi:
 Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate sehingga perlu menghapus baris yang bernilai null.
 
 2. Handling Outlier
+
 ![Outlier 1](https://github.com/novandristnjk/laporan/assets/110597813/cead662c-bd53-436e-b500-6c998c81e0fc)
 
 ![Outlier 2](https://github.com/novandristnjk/laporan/assets/110597813/61929f64-9e4b-433a-b892-7ad2b4d6cfc2)
@@ -77,7 +78,9 @@ dapat dilihat, pada beberapa fitur numerik di atas terdapat outliers. Outliers d
 Terdapat empat variabel kategori dalam dataset, yaitu "person_home_ownership", "loan_grade", "loan_intent", dan "cb_person_default_on_file". Pada variabel "loan_grade" dan "cb_person_default_on_file" digunakan teknik LabelEncoding, karena kedua variabel tersebut memiliki tingkatan atau urutan yang terkait. Pada variabel "person_home_ownership" dan  "loan_intent" digunakan teknik OneHotEncoding, karena kedua variabel tersebut tidak memiliki tingkatan atau urutan yang terkait.
 
 4. Balancing Dataset
+
 ![Imballance Dataset](https://github.com/novandristnjk/laporan/assets/110597813/6f7ecc05-6591-432d-a468-1eccef08aac7)
+
 Dapat dilihat bahwa terjadi ketidakseimbangan data pada fitur target "loan_status", dimana nilai sangat jauh lebih banyak dibanding nilai 1. Ketidakseimbangan dataset dapat menghasilkan model yang tidak optimal dan bias terhadap kelas mayoritas. Untuk menyeimbangkan dataset dilakukan oversampling menggunakan metode SMOTE dengan menggandakan sampel pada fitur "loan_status"  yang bernilai 1. SMOTE bekerja dengan menciptakan sampel sintetis baru untuk kelas minoritas dengan menggunakan teknik interpolasi antara sampel yang sudah ada dalam kelas minoritas. Oversampling dipilih karena jika menggunakan metode undersampling, maka jumlah akan berkurang sangat besar sehingga dapat kehilangan informasi dari data yang dihilangkan.
 
 5. Train-Test Splitting : Memisahkan data menjadi data latihan (train) dan data uji (test) dengan perbandingan 90:10.

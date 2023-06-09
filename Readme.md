@@ -60,6 +60,22 @@ Variabel-variabel dalam dataset Credit Risk meliputi:
 
 Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate sehingga perlu menghapus baris yang bernilai null.
 
+![describe](https://github.com/novandristnjk/laporan/assets/110597813/b36b4dfc-8225-4e01-8007-490adb2ff3ce)
+
+Dari hasil fungsi describe(), nilai minimum untuk kolom "loan_percent_income" adalah 0. "loan_percent_income" merupakan presentase pendapatan tahunan peminjam terhadap cicilan pinjaman sehingga tidak mungkin ada yang bernilai 0 jika tidak ada "loan_amnt" atau jumlah pinjaman yang bernilai 0. Dilakukan pengecekan ada berapa missing value pada kolom "loan_percent_income":
+
+```
+loan_percent_income = (df.loan_percent_income == 0).sum()
+
+print("Nilai 0 di kolom loan_percent_income ada: ", loan_percent_income)
+```
+
+Output:
+
+![output missing value](https://github.com/novandristnjk/laporan/assets/110597813/cc2f4cf2-88e7-4ac4-8eed-3ac38627946d)
+
+Terdapat 8 sampel missing value yang merupakan jumlah yang kecil dibandingkan total sampel. Oleh karena itu missing value tersebut dihapus. Setelah baris bernilai 0 dihapus, jumlah sampel atau baris data berubah menjadi 28638.
+
 2. Handling Outlier
 
 ![Outlier 1](https://github.com/novandristnjk/laporan/assets/110597813/cead662c-bd53-436e-b500-6c998c81e0fc)

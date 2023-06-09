@@ -57,6 +57,7 @@ Variabel-variabel dalam dataset Credit Risk meliputi:
 1. Data Cleaning
 
 ![Data null](https://github.com/novandristnjk/laporan/assets/110597813/429c0c08-1f04-4fdc-82dc-b2f729c55663)
+
 Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate sehingga perlu menghapus baris yang bernilai null.
 
 2. Handling Outlier

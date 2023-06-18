@@ -134,4 +134,5 @@ Hasil proyek berdasarkan metrik evaluasi yang digunakan:
 
     Berdasarkan metrik evaluasi yang digunakan, kesimpulan yang dapat diambil adalah model Boosting memiliki tingkat akurasi yang lebih rendah dibandingkan dengan model lainnya. Di sisi lain, model Random Forest menunjukkan tingkat akurasi yang lebih tinggi. Oleh karena itu, disarankan untuk menggunakan model Random Forest untuk membuat model machine learning klasifikasi yang dapat digunakan untuk mengidentifikasi risiko kredit.
 
-$(\text{True Positive} + \text{True Negative})$ dengan jumlah total prediksi $(\text{True Positive} + \text{True Negative} + \text{False Positive} + \text{False Negative})$.
+Akurasi = $\frac{{\text{{True Positive}} + \text{{True Negative}}}}{{\text{{True Positive}} + \text{{True Negative}} + \text{{False Positive}} + \text{{False Negative}}}}$
+

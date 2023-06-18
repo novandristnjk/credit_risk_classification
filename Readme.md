@@ -102,21 +102,55 @@ Dapat dilihat bahwa terjadi ketidakseimbangan data pada fitur target "loan_statu
 5. Train-Test Splitting : Memisahkan data menjadi data latihan (train) dan data uji (test) dengan perbandingan 90:10.
 
 ## Modeling
-Pada tahap ini, kami menggunakan dua algoritma untuk mengklasifikasikan loan status, yaitu K-Nearest Neighbor, Random Forest Classifier, Boosting Algorithm, dan Support Vector Classifier.
+Pada tahap ini digunakan empat model untuk mengklasifikasikan loan status, yaitu K-Nearest Neighbor, Random Forest Classifier, Boosting Algorithm, dan Support Vector Classifier.
 1. K-Nearest Neighbor:
-   - Jumlah tetangga (n_neighbors) : 10
+   - Jumlah tetangga : 10
+  Jumlah tetangga dalam K-Nearest Neighbors (KNN) adalah parameter yang digunakan untuk menentukan jumlah tetangga terdekat yang akan digunakan dalam proses klasifikasi atau regresi. KNN adalah sebuah algoritma pembelajaran mesin yang digunakan untuk melakukan klasifikasi atau regresi berdasarkan kumpulan data yang ada di sekitarnya. Dalam KNN, ketika akan mengklasifikasikan atau meramalkan label dari sebuah sampel data yang belum diketahui, algoritma mencari k-nearest neighbors (k-tetangga terdekat) dari sampel tersebut berdasarkan jarak euclidean atau metrik jarak lainnya. Jumlah tetangga menentukan berapa banyak tetangga terdekat yang akan digunakan dalam proses ini.
+
 2. Random Forest Classifier
-   - Jumlah pohon (n_estimators) : 50
-   - Kedalaman maksimum pohon (max_depth): 16
-   - Random State (random_state) : 55
-   - Jumlah job (n_jobs) : 1
+   - Jumlah pohon : 50
+   Jumlah pohon pada Random Forest adalah parameter yang menentukan berapa banyak pohon keputusan yang akan digunakan dalam ensemble. Random Forest adalah sebuah algoritma pembelajaran mesin yang menggabungkan beberapa pohon keputusan untuk melakukan klasifikasi atau regresi. Dalam Random Forest, setiap pohon keputusan dibangun secara independen dengan menggunakan subset acak dari data pelatihan. Jumlah pohon mengontrol berapa banyak pohon keputusan yang akan dibangun dalam ensemble. Semakin banyak pohon yang digunakan, semakin kompleks modelnya. Jumlah pohon yang lebih besar cenderung memberikan model yang lebih kuat dan lebih mampu menangkap hubungan yang kompleks dalam data. Namun, terlalu banyak pohon juga dapat menyebabkan overfitting, di mana model "menghafal" data pelatihan tetapi tidak umum untuk data yang tidak dilihat sebelumnya.
+   - Kedalaman maksimum pohon : 16
+   Kedalaman maksimum pohon adalah parameter yang digunakan dalam pohon keputusan dan beberapa algoritma berbasis pohon lainnya, seperti Random Forest. Max_depth menentukan seberapa dalam pohon keputusan dapat tumbuh dengan membatasi jumlah tingkat atau simpul dalam pohon.
+    Ketika membangun pohon keputusan, algoritma akan membagi setiap simpul berdasarkan fitur dan ambil keputusan berdasarkan kriteria yang ditentukan, seperti gain informasi atau gini impurity. Dengan setiap pembagian, pohon tumbuh lebih dalam dengan menambahkan tingkat baru. Kedalaman maksimum pohon mengatur seberapa banyak tingkat yang diizinkan dalam pohon tersebut.
+    Membatasi kedalaman maksimum pohon adalah langkah yang penting untuk mencegah overfitting. Jika pohon memiliki kedalaman yang sangat besar, ia dapat dengan mudah "menghafal" data pelatihan dengan sangat spesifik, tetapi akan cenderung tidak mampu melakukan generalisasi dengan baik pada data baru. Dalam kasus tersebut, model akan terlalu kompleks dan sensitif terhadap noise atau variasi kecil dalam data pelatihan.
+   - Random State : 55
+   Random State adalah parameter yang digunakan dalam algoritma pembelajaran mesin untuk mengontrol randomization atau keacakan yang terkait dengan model. Ketika model menggunakan algoritma yang melibatkan elemen keacakan, seperti inisialisasi bobot, pembagian data, atau pembangunan model, random_state memungkinkan pengguna untuk menetapkan nilai awal yang tetap sehingga model dapat menghasilkan hasil yang konsisten setiap kali dijalankan dengan nilai random_state yang sama.
+    Dalam konteks algoritma pembelajaran mesin, seperti pemisahan data menjadi set pelatihan dan pengujian, pengacakan urutan data, atau inisialisasi bobot dalam beberapa model, penggunaan random_state memungkinkan replikabilitas atau reproduktibilitas yang diinginkan. Dengan menetapkan nilai random_state yang sama, kita dapat memastikan bahwa model akan menghasilkan hasil yang serupa setiap kali dijalankan.
+    Random_state biasanya dinyatakan dalam bentuk bilangan bulat, dan nilai yang digunakan tidak terlalu penting. Yang penting adalah bahwa nilai random_state yang sama akan menghasilkan hasil yang sama. Namun, penting untuk dicatat bahwa mengubah nilai random_state dapat menghasilkan model yang berbeda, dan dengan demikian, penting untuk melakukan eksperimen dan validasi model menggunakan variasi nilai random_state untuk memahami stabilitas dan performa model secara menyeluruh.
+   - Jumlah job : 1
+   Jumlah job (n_jobs) adalah parameter yang digunakan dalam Random Forest untuk mengontrol paralelisasi atau penggunaan multiple core atau CPU dalam proses pembangunan pohon keputusan. Random Forest dapat membangun pohon keputusan secara independen dan paralel untuk mempercepat proses pelatihan.
+    Nilai n_jobs menentukan berapa banyak pekerjaan yang akan dijalankan secara paralel. Jika n_jobs diatur sebagai -1, maka semua core atau CPU yang tersedia akan digunakan untuk melatih model secara paralel. Jika n_jobs diatur sebagai nilai positif, maka jumlah core atau CPU yang digunakan akan sesuai dengan nilai n_jobs yang ditentukan.
 3. Boosting Algorithm
-   - Tingkat pembelajaran (learning_rate)
-   - Random State (random_state) : 55
+   - Tingkat pembelajaran : 0.05
+   Tingkat pembelajaran (learning_rate) adalah parameter yang digunakan dalam algoritma boosting untuk mengontrol seberapa banyak setiap model kecil atau pohon keputusan berkontribusi terhadap model ensemble akhir. Algoritma boosting seperti Gradient Boosting dan AdaBoost membangun model secara iteratif dengan menambahkan model kecil berulang kali ke ensemble.
+    Learning rate menentukan seberapa banyak bobot yang diberikan kepada model kecil yang baru ditambahkan ke ensemble pada setiap iterasi. Semakin tinggi learning rate, semakin besar pengaruh model baru dalam memperbaiki kesalahan model sebelumnya. Namun, nilai learning rate yang terlalu tinggi dapat menyebabkan model overfitting pada data pelatihan.
+   - Random State : 55
+   Random State pada algoritma boosting mengacu pada parameter yang digunakan untuk mengontrol inisialisasi keacakan dalam algoritma. Algoritma boosting, seperti Gradient Boosting dan AdaBoost, melibatkan penggunaan beberapa model kecil yang diiterasi untuk meningkatkan performa model ensemble.
+    Random State digunakan untuk menetapkan nilai awal yang tetap dalam inisialisasi keacakan yang terkait dengan algoritma boosting. Dengan menetapkan random_state dengan nilai tertentu, kita dapat memastikan bahwa proses inisialisasi yang melibatkan pengacakan nilai, misalnya dalam memilih subset data atau menentukan inisialisasi bobot, akan menghasilkan hasil yang konsisten setiap kali algoritma dijalankan dengan nilai random_state yang sama.
 4. Support Vector Classifier
 
 ## Evaluation
-Metrik evaluasi yang digunakan dalam proyek ini adalah akurasi (accuracy). Metode evaluasi ini mengukur nilai akurasi yang didapatkan dari jumlah data bernilai positif yang diprediksi positif dan data bernilai negatif yang diprediksi negatif dibagi dengan jumlah seluruh data di dalam dataset.
+Metrik evaluasi yang digunakan dalam proyek ini adalah akurasi, presisi (precision), recall, dan F1-score.
+
+1. Akurasi
+Kelebihan utama akurasi adalah memberikan gambaran umum tentang sejauh mana model dapat melakukan prediksi yang benar secara keseluruhan. Metrik ini cocok digunakan ketika kelas positif dan kelas negatif memiliki bobot yang seimbang dalam dataset. Namun, akurasi tidak memberikan informasi rinci tentang jenis kesalahan yang dibuat oleh model. Jika terdapat ketidakseimbangan antara jumlah sampel dalam kelas positif dan kelas negatif, akurasi mungkin menjadi tidak representatif. Dalam kasus tersebut, metrik evaluasi lain seperti presisi, recall, dan F1-score bisa memberikan informasi yang lebih bermanfaat.
+Akurasi = $\frac{{\text{{True Positive}} + \text{{True Negative}}}}{{\text{{True Positive}} + \text{{True Negative}} + \text{{False Positive}} + \text{{False Negative}}}}$
+
+2. Presisi(Precision)
+Presisi menggambarkan sejauh mana model dapat mengidentifikasi dengan benar kasus positif dari prediksi positif yang dilakukan. Metrik ini penting ketika fokus utama adalah mengurangi kesalahan positif palsu (misclassification yang mengatakan bahwa suatu sampel adalah positif ketika sebenarnya negatif).
+Presisi berguna dalam kasus di mana kesalahan positif palsu memiliki konsekuensi yang lebih serius, misalnya dalam sistem deteksi penyakit di mana kesalahan diagnosis positif palsu dapat menyebabkan kecemasan yang tidak perlu atau pengobatan yang tidak perlu.
+Precision = $\frac{{\text{{True Positive}}}}{{\text{{True Positive}} + \text{{False Positive}}}}$
+
+3. Recall
+Recall (juga dikenal sebagai sensitivitas atau true positive rate) menggambarkan sejauh mana model dapat menemukan atau mengenali kasus positif secara keseluruhan dari semua kasus positif yang ada. Metrik ini penting ketika fokus utama adalah mengurangi kesalahan negatif palsu (misclassification yang mengatakan bahwa suatu sampel adalah negatif ketika sebenarnya positif).
+Recall berguna dalam kasus di mana kesalahan negatif palsu memiliki konsekuensi yang lebih serius, misalnya dalam sistem deteksi kejahatan atau deteksi penyakit serius, di mana kesalahan mengabaikan kasus positif dapat berdampak besar.
+Recall = $\frac{{\text{{True Positive}}}}{{\text{{True Positive}} + \text{{False Negative}}}}$
+
+4. F1-Score
+F1-score adalah harmonik rata-rata presisi dan recall, yang memberikan kompromi antara keduanya. Metrik ini berguna ketika kita ingin menyeimbangkan presisi dan recall secara seimbang, terutama dalam kasus di mana kelas positif dan kelas negatif memiliki distribusi yang tidak seimbang dalam dataset.
+F1-score berguna ketika ada ketidakseimbangan antara presisi dan recall yang diinginkan. Misalnya, dalam kasus deteksi spam email, di mana kita ingin meminimalkan kesalahan positif palsu (presisi tinggi) dan kesalahan negatif palsu (recall tinggi) secara bersamaan.
+F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text{{Precision}} + \text{{Recall}}}}$
 
 Hasil proyek berdasarkan metrik evaluasi yang digunakan:
 1. K-Nearest Neighbor:
@@ -133,6 +167,3 @@ Hasil proyek berdasarkan metrik evaluasi yang digunakan:
    - Test Accuracy : 0.92
 
     Berdasarkan metrik evaluasi yang digunakan, kesimpulan yang dapat diambil adalah model Boosting memiliki tingkat akurasi yang lebih rendah dibandingkan dengan model lainnya. Di sisi lain, model Random Forest menunjukkan tingkat akurasi yang lebih tinggi. Oleh karena itu, disarankan untuk menggunakan model Random Forest untuk membuat model machine learning klasifikasi yang dapat digunakan untuk mengidentifikasi risiko kredit.
-
-Akurasi = $\frac{{\text{{True Positive}} + \text{{True Negative}}}}{{\text{{True Positive}} + \text{{True Negative}} + \text{{False Positive}} + \text{{False Negative}}}}$
-

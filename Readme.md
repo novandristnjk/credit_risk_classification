@@ -135,6 +135,9 @@ Metrik evaluasi yang digunakan dalam proyek ini adalah akurasi, presisi (precisi
 
 1. Akurasi
 Kelebihan utama akurasi adalah memberikan gambaran umum tentang sejauh mana model dapat melakukan prediksi yang benar secara keseluruhan. Metrik ini cocok digunakan ketika kelas positif dan kelas negatif memiliki bobot yang seimbang dalam dataset. Namun, akurasi tidak memberikan informasi rinci tentang jenis kesalahan yang dibuat oleh model. Jika terdapat ketidakseimbangan antara jumlah sampel dalam kelas positif dan kelas negatif, akurasi mungkin menjadi tidak representatif. Dalam kasus tersebut, metrik evaluasi lain seperti presisi, recall, dan F1-score bisa memberikan informasi yang lebih bermanfaat.
+
+Rumus:
+
 Akurasi = $\frac{{\text{{True Positive}} + \text{{True Negative}}}}{{\text{{True Positive}} + \text{{True Negative}} + \text{{False Positive}} + \text{{False Negative}}}}$
 
 2. Presisi(Precision)

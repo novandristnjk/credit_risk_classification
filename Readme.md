@@ -135,27 +135,31 @@ Metrik evaluasi yang digunakan dalam proyek ini adalah akurasi, presisi (precisi
 
 1. Akurasi
 Kelebihan utama akurasi adalah memberikan gambaran umum tentang sejauh mana model dapat melakukan prediksi yang benar secara keseluruhan. Metrik ini cocok digunakan ketika kelas positif dan kelas negatif memiliki bobot yang seimbang dalam dataset. Namun, akurasi tidak memberikan informasi rinci tentang jenis kesalahan yang dibuat oleh model. Jika terdapat ketidakseimbangan antara jumlah sampel dalam kelas positif dan kelas negatif, akurasi mungkin menjadi tidak representatif. Dalam kasus tersebut, metrik evaluasi lain seperti presisi, recall, dan F1-score bisa memberikan informasi yang lebih bermanfaat.
+
 Rumus:
 
 Akurasi = $\frac{{\text{{True Positive}} + \text{{True Negative}}}}{{\text{{True Positive}} + \text{{True Negative}} + \text{{False Positive}} + \text{{False Negative}}}}$
 
-3. Presisi(Precision)
+2. Presisi(Precision)
 Presisi menggambarkan sejauh mana model dapat mengidentifikasi dengan benar kasus positif dari prediksi positif yang dilakukan. Metrik ini penting ketika fokus utama adalah mengurangi kesalahan positif palsu (misclassification yang mengatakan bahwa suatu sampel adalah positif ketika sebenarnya negatif).
 Presisi berguna dalam kasus di mana kesalahan positif palsu memiliki konsekuensi yang lebih serius, misalnya dalam sistem deteksi penyakit di mana kesalahan diagnosis positif palsu dapat menyebabkan kecemasan yang tidak perlu atau pengobatan yang tidak perlu.
+
 Rumus:
 
 Precision = $\frac{{\text{{True Positive}}}}{{\text{{True Positive}} + \text{{False Positive}}}}$
 
-4. Recall
+3. Recall
 Recall (juga dikenal sebagai sensitivitas atau true positive rate) menggambarkan sejauh mana model dapat menemukan atau mengenali kasus positif secara keseluruhan dari semua kasus positif yang ada. Metrik ini penting ketika fokus utama adalah mengurangi kesalahan negatif palsu (misclassification yang mengatakan bahwa suatu sampel adalah negatif ketika sebenarnya positif).
 Recall berguna dalam kasus di mana kesalahan negatif palsu memiliki konsekuensi yang lebih serius, misalnya dalam sistem deteksi kejahatan atau deteksi penyakit serius, di mana kesalahan mengabaikan kasus positif dapat berdampak besar.
+
 Rumus:
 
 Recall = $\frac{{\text{{True Positive}}}}{{\text{{True Positive}} + \text{{False Negative}}}}$
 
-5. F1-Score
+4. F1-Score
 F1-score adalah harmonik rata-rata presisi dan recall, yang memberikan kompromi antara keduanya. Metrik ini berguna ketika kita ingin menyeimbangkan presisi dan recall secara seimbang, terutama dalam kasus di mana kelas positif dan kelas negatif memiliki distribusi yang tidak seimbang dalam dataset.
 F1-score berguna ketika ada ketidakseimbangan antara presisi dan recall yang diinginkan. Misalnya, dalam kasus deteksi spam email, di mana kita ingin meminimalkan kesalahan positif palsu (presisi tinggi) dan kesalahan negatif palsu (recall tinggi) secara bersamaan.
+
 Rumus:
 
 F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text{{Precision}} + \text{{Recall}}}}$

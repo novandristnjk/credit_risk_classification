@@ -165,7 +165,7 @@ Rumus:
 F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text{{Precision}} + \text{{Recall}}}}$
 
 Hasil proyek berdasarkan metrik evaluasi yang digunakan:
-|          |            Train                     |                        Test                      |
+|          |          |           |          |          |          |           |          |          |
 |----------|----------|-----------|----------|----------|----------|-----------|----------|----------|
 |          | Accuracy | Precision | Recall   | F1-Score | Accuracy | Precision | Recall   | F1-Score |
 | KNN      | 0.926517 | 0.946743  | 0.903595 | 0.924666 | 0.915429 | 0.931892  | 0.899322 | 0.915317 |

@@ -165,17 +165,11 @@ Rumus:
 F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text{{Precision}} + \text{{Recall}}}}$
 
 Hasil proyek berdasarkan metrik evaluasi yang digunakan:
-1. K-Nearest Neighbor:
-   - Train Accuracy : 0.92
-   - Test Accuracy : 0.91
-2. Random Forest Classifier
-   - Train Accuracy : 0.97
-   - Test Accuracy : 0.94
-3. Boosting Algorithm
-   - Train Accuracy : 0.79
-   - Test Accuracy : 0.79
-4. Support Vector Classifier
-   - Train Accuracy : 0.93
-   - Test Accuracy : 0.92
-
+|          |          |           |          |          |          |           |          |          |
+|----------|----------|-----------|----------|----------|----------|-----------|----------|----------|
+|          | Accuracy | Precision | Recall   | F1-Score | Accuracy | Precision | Recall   | F1-Score |
+| KNN      | 0.926517 | 0.946743  | 0.903595 | 0.924666 | 0.915429 | 0.931892  | 0.899322 | 0.915317 |
+| RF       | 0.977048 | 0.998089  | 0.955842 | 0.976509 | 0.946182 | 0.984729  | 0.90819  | 0.944912 |
+| Boosting | 0.799057 | 0.826736  | 0.755771 | 0.789662 | 0.800106 | 0.838278  | 0.751695 | 0.792629 |
+| SVC      | 0.933854 | 0.979569  | 0.885944 | 0.930407 | 0.927359 | 0.97568   | 0.878978 | 0.924808 |
     Berdasarkan metrik evaluasi yang digunakan, kesimpulan yang dapat diambil adalah model Boosting memiliki tingkat akurasi yang lebih rendah dibandingkan dengan model lainnya. Di sisi lain, model Random Forest menunjukkan tingkat akurasi yang lebih tinggi. Oleh karena itu, disarankan untuk menggunakan model Random Forest untuk membuat model machine learning klasifikasi yang dapat digunakan untuk mengidentifikasi risiko kredit.

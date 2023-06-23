@@ -37,8 +37,6 @@ Pengendalian pada Risiko kredit tentu dilakukan oleh setiap bank. Pengendalian t
 ## Data Understanding
 Data yang digunakan dalam proyek ini adalah dataset Credit Risk yang berisi informasi tentang pengajuan pinjaman dan status kredit. Dataset ini dapat diunduh dari [kaggle](https://www.kaggle.com/datasets/laotse/credit-risk-dataset).
 
-Tabel 1 variabel dan deskripsi data.
-
 | Variabel | Deskripsi |
 |-----|-----------|
 |person_age| Usia peminjam|
@@ -54,10 +52,13 @@ Tabel 1 variabel dan deskripsi data.
 |cb_person_default_on_file| Riwayat kredit peminjam ("Y" menunjukkan bahwa peminjam memiliki riwayat gagal membayar kredit atau menunggak dalam catatan kreditnya. "N" menunjukkan bahwa peminjam tidak memiliki riwayat gagal membayar kredit atau menunggak dalam catatan kreditnya.)|
 |cb_preson_cred_hist_length| Durasi sejak peminjam memiliki catatan kredit yang tercatat|
 
+Tabel 1 variabel dan deskripsi data.
+
 ## Data preparation
 1. Data Cleaning
 
 ![Data null](https://github.com/novandristnjk/laporan/assets/110597813/429c0c08-1f04-4fdc-82dc-b2f729c55663)
+
 Gambar 1. Data sebelum dibersihkan
 
 Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate sehingga perlu menghapus baris yang bernilai null.

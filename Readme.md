@@ -59,11 +59,13 @@ Tabel 1 variabel dan deskripsi data.
 
 ![Data null](https://github.com/novandristnjk/laporan/assets/110597813/429c0c08-1f04-4fdc-82dc-b2f729c55663)
 
-Gambar 1. Data sebelum dibersihkan
+Gambar 1. Data bernilai null sebelum dibersihkan
 
 Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate sehingga perlu menghapus baris yang bernilai null.
 
 ![describe](https://github.com/novandristnjk/laporan/assets/110597813/b36b4dfc-8225-4e01-8007-490adb2ff3ce)
+
+Gambar 2. Deskripsi data
 
 Dari hasil fungsi describe(), nilai minimum untuk kolom "loan_percent_income" adalah 0. "loan_percent_income" merupakan presentase pendapatan tahunan peminjam terhadap cicilan pinjaman sehingga tidak mungkin ada yang bernilai 0 jika tidak ada "loan_amnt" atau jumlah pinjaman yang bernilai 0. Dilakukan pengecekan ada berapa missing value pada kolom "loan_percent_income":
 
@@ -83,13 +85,16 @@ Terdapat 8 sampel missing value yang merupakan jumlah yang kecil dibandingkan to
 
 ![Outlier 1](https://github.com/novandristnjk/laporan/assets/110597813/cead662c-bd53-436e-b500-6c998c81e0fc)
 
+Gambar 3. Boxplot variabel "person_age"
+
 ![Outlier 2](https://github.com/novandristnjk/laporan/assets/110597813/61929f64-9e4b-433a-b892-7ad2b4d6cfc2)
+Gambar 4. Boxplot variabel "person_emp_length"
 
 ![Outlier 3](https://github.com/novandristnjk/laporan/assets/110597813/ab21d406-3221-441a-b247-30b4776ee11d)
+Gambar 5. Boxplot variabel "loan_amnt"
 
 ![Outlier 4](https://github.com/novandristnjk/laporan/assets/110597813/5c666cfa-8b89-4143-a7aa-f88bda0b089c)
-
-![Outlier 5](https://github.com/novandristnjk/laporan/assets/110597813/bc156cba-4027-4fce-a776-8b77bb869485)
+Gambar 6. Boxplot variabel "loan_percent_income"
 
 dapat dilihat, pada beberapa fitur numerik di atas terdapat outliers. Outliers diidentifikasi menggunakan metode IQR  dan dihapus baris yang mengandung outliers.
 
@@ -99,6 +104,8 @@ Terdapat empat variabel kategori dalam dataset, yaitu "person_home_ownership", "
 4. Balancing Dataset
 
 ![Imballance Dataset](https://github.com/novandristnjk/laporan/assets/110597813/6f7ecc05-6591-432d-a468-1eccef08aac7)
+
+Gambar 7. Perbandingan nilai 0 dan 1 pada fitur targer "loan_status"
 
 Dapat dilihat bahwa terjadi ketidakseimbangan data pada fitur target "loan_status", dimana nilai sangat jauh lebih banyak dibanding nilai 1. Ketidakseimbangan dataset dapat menghasilkan model yang tidak optimal dan bias terhadap kelas mayoritas. Untuk menyeimbangkan dataset dilakukan oversampling menggunakan metode SMOTE dengan menggandakan sampel pada fitur "loan_status"  yang bernilai 1. SMOTE bekerja dengan menciptakan sampel sintetis baru untuk kelas minoritas dengan menggunakan teknik interpolasi antara sampel yang sudah ada dalam kelas minoritas. Oversampling dipilih karena jika menggunakan metode undersampling, maka jumlah akan berkurang sangat besar sehingga dapat kehilangan informasi dari data yang dihilangkan.
 
@@ -167,7 +174,6 @@ Rumus:
 
 F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text{{Precision}} + \text{{Recall}}}}$
 
-Hasil proyek berdasarkan metrik evaluasi yang digunakan:
 |          | Accuracy Train | Precision Train | Recall Train | F1-Score Train | Accuracy Test | Precision Test | Recall Test | F1-Score Test |
 |----------|----------------|-----------------|--------------|----------------|---------------|----------------|-------------|---------------|
 | KNN      | 0.926517       | 0.946743        | 0.903595     | 0.924666       | 0.915429      | 0.931892       | 0.899322    | 0.915317      |
@@ -175,6 +181,7 @@ Hasil proyek berdasarkan metrik evaluasi yang digunakan:
 | Boosting | 0.799057       | 0.826736        | 0.755771     | 0.789662       | 0.800106      | 0.838278       | 0.751695    | 0.792629      |
 | SVC      | 0.933854       | 0.979569        | 0.885944     | 0.930407       | 0.927359      | 0.97568        | 0.878978    | 0.924808      |
 
+Tabel 2. Hasil evaluasi
 
 Dalam analisis model berdasarkan evaluasi yang diberikan, terdapat beberapa metrik yang dipertimbangkan, yaitu akurasi (Accuracy), presisi (Precision), recall (Recall), dan f1-score.
 

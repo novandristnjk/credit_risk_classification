@@ -178,6 +178,7 @@ Rumus:
 
 F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text{{Precision}} + \text{{Recall}}}}$
 
+
 Tabel 2. Hasil evaluasi
 
 |          | Accuracy Train | Precision Train | Recall Train | F1-Score Train | Accuracy Test | Precision Test | Recall Test | F1-Score Test |

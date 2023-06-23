@@ -1,7 +1,7 @@
 # Laporan Proyek Machine Learning - Novandri Sitinjak
 
 ## Latar Belakang
-Bank merupakan lembaga intermediasi yang bertugas menerima simpanan dari nasabah dan meminjamkannya kepada nasabah (unit ekonomi) lain yang membutuhkan dana. Atas simpanan masyarakat, bank memberikan imbalan berupa bunga. Demikian pula, atas pemberian pinjaman (kredit) bank mengenakan bunga kepada para peminjam. Dengan kata lain bank sebagai lembaga keuangan yang berfungsi menghimpun dan menyalurkan dana dari dan ke masyarakat untuk meningkatkan pelayanan kepada para nasabah tanpa mengabaikan etika perbankan.
+Bank merupakan lembaga intermediasi yang bertugas menerima simpanan dari nasabah dan meminjamkannya kepada nasabah (unit ekonomi) lain yang membutuhkan dana. Atas simpanan masyarakat, bank memberikan imbalan berupa bunga. Demikian pula, atas pemberian pinjaman (kredit) bank mengenakan bunga kepada para peminjam. Dengan kata lain bank sebagai lembaga keuangan yang berfungsi menghimpun dan menyalurkan dana dari dan ke masyarakat untuk meningkatkan pelayanan kepada para nasabah tanpa mengabaikan etika perbankan[1].
 
 Salah satu kegiatan utama bank adalah menyalurkan dana kepada masyarakat dalam bentuk kredit. Hal ini didasarkan pada kenyataan bahwa perkreditan merupakan aktivitas terbesar pada perbankan. Besarnya jumlah kredit yang disalurkan akan menentukan keuntungan bank. Jika bank tidak mampu menyalurkan kredit sementara dana dari masyarakat banyak disimpan, maka alternative lain bank bisa menyalurkan dananya melalui pasar uang maupun pasar modal. Hal ini dilakukan untuk memperoleh keuntungan yang maksimal. Apabila bank tidak melakukan alternative lain selaain menyalurkan kredit maka bank akan mengalami kerugian, karena harus membayar bunga simpanan kepada masyarakat.
 
@@ -197,4 +197,6 @@ _Random Forest_ adalah model ensemble yang menggabungkan beberapa pohon keputusa
 
 ## Reference
 
-[1]   Ikatan Bankir Indonesia, "Manajemen Risiko 2", 
+[1]   Ikatan Bankir Indonesia, "Manajemen Risiko 2 Mengidentifikasi Risiko, Likuiditas, Reputasi, Hukum, Kepatuhan, Dan Strategik Bank". Jakarta. Gramedia Pustaka Utama.
+[2]   M. Desda, Yurasti "Manajemen Risiko 2 Mengidentifikasi Risiko, Likuiditas, Reputasi, Hukum, Kepatuhan, Dan Strategik Bank". Jakarta. Gramedia Pustaka Utama.
+[3]   T. Getahun, L. Anwen, dan M. S. Bari"MCredit Risk Management and Its Impact on Performance of Commercial Banks: In of Case Ethiopia ". Ethiopia. J. Finance. Accounting.

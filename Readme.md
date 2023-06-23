@@ -197,3 +197,4 @@ _Random Forest_ adalah model ensemble yang menggabungkan beberapa pohon keputusa
 
 ## Reference
 
+[1]   Ikatan Bankir Indonesia, "Manajemen Risiko 2", 

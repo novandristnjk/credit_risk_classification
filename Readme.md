@@ -165,12 +165,17 @@ Rumus:
 F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text{{Precision}} + \text{{Recall}}}}$
 
 Hasil proyek berdasarkan metrik evaluasi yang digunakan:
-|          |          |           |          |          |          |           |          |          |
-|----------|----------|-----------|----------|----------|----------|-----------|----------|----------|
-|          | Accuracy Train | Precision Train | Recall Train   | F1-Score Train | Accuracy Test | Precision Test | Recall Test   | F1-Score Test |
-| KNN      | 0.926517 | 0.946743  | 0.903595 | 0.924666 | 0.915429 | 0.931892  | 0.899322 | 0.915317 |
-| RF       | 0.977048 | 0.998089  | 0.955842 | 0.976509 | 0.946182 | 0.984729  | 0.90819  | 0.944912 |
-| Boosting | 0.799057 | 0.826736  | 0.755771 | 0.789662 | 0.800106 | 0.838278  | 0.751695 | 0.792629 |
-| SVC      | 0.933854 | 0.979569  | 0.885944 | 0.930407 | 0.927359 | 0.97568   | 0.878978 | 0.924808 |
+|          | Accuracy Train | Precision Train | Recall Train | F1-Score Train | Accuracy Test | Precision Test | Recall Test | F1-Score Test |
+|----------|----------------|-----------------|--------------|----------------|---------------|----------------|-------------|---------------|
+| KNN      | 0.926517       | 0.946743        | 0.903595     | 0.924666       | 0.915429      | 0.931892       | 0.899322    | 0.915317      |
+| RF       | 0.977048       | 0.998089        | 0.955842     | 0.976509       | 0.946182      | 0.984729       | 0.90819     | 0.944912      |
+| Boosting | 0.799057       | 0.826736        | 0.755771     | 0.789662       | 0.800106      | 0.838278       | 0.751695    | 0.792629      |
+| SVC      | 0.933854       | 0.979569        | 0.885944     | 0.930407       | 0.927359      | 0.97568        | 0.878978    | 0.924808      |
 
-    Berdasarkan metrik evaluasi yang digunakan, kesimpulan yang dapat diambil adalah model Boosting memiliki tingkat akurasi yang lebih rendah dibandingkan dengan model lainnya. Di sisi lain, model Random Forest menunjukkan tingkat akurasi yang lebih tinggi. Oleh karena itu, disarankan untuk menggunakan model Random Forest untuk membuat model machine learning klasifikasi yang dapat digunakan untuk mengidentifikasi risiko kredit.
+
+Dalam analisis model berdasarkan evaluasi yang diberikan, terdapat beberapa metrik yang dipertimbangkan, yaitu akurasi (Accuracy), presisi (Precision), recall (Recall), dan f1-score.
+
+Jika kita fokus pada akurasi, model Random Forest (RF) memiliki akurasi tertinggi pada data train dan data test. Ini menunjukkan kemampuan model untuk secara konsisten melakukan klasifikasi yang akurat pada data train dan test. Jika kita mempertimbangkan presisi dan recall pada data train dan data test, Random Forest memiliki nilai presisi dan recall yang seimbang baik pada data latih maupun data uji. Dalam konteks klasifikasi risiko kredit, penting untuk memiliki presisi yang tinggi (menghindari banyak kesalahan positif) dan recall yang tinggi (menghindari banyak kesalahan negatif). RF memberikan keseimbangan yang baik antara kedua metrik ini.
+Selain itu, Random Forest juga memiliki nilai f1-score yang paling tinggi. F1-Score menggabungkan presisi dan recall menjadi satu metrik. RF memberikan skor F1-Score yang baik pada data latih maupun data uji, menunjukkan kemampuannya dalam mengklasifikasikan risiko kredit secara akurat dan seimbang.
+
+Random Forest adalah model ensemble yang menggabungkan beberapa pohon keputusan. Kelebihan dari model ensemble adalah kemampuannya dalam menangani kompleksitas data dan mengurangi overfitting. Dalam klasifikasi risiko kredit, di mana terdapat banyak faktor yang mempengaruhi keputusan, model ensemble seperti RF dapat memberikan performa yang lebih baik daripada model lain yang lebih sederhana.

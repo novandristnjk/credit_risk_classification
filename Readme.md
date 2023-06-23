@@ -59,6 +59,7 @@ Tabel 1 variabel dan deskripsi data.
 
 ![Data null](https://github.com/novandristnjk/laporan/assets/110597813/429c0c08-1f04-4fdc-82dc-b2f729c55663)
 
+
 Gambar 1. Data bernilai null sebelum dibersihkan
 
 Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate sehingga perlu menghapus baris yang bernilai null.

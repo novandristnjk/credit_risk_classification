@@ -20,17 +20,17 @@ Pengendalian pada Risiko kredit tentu dilakukan oleh setiap bank. Pengendalian t
 2. Meningkatkan performa model klasifikasi dalam memprediksi risiko kredit.
 
 ## Solution Statement
-   Keempat model klasifikasi yang dipilih, yaitu K-Nearest Neighbor (KNN), Random Forest, Boosting Algorithm, dan Support Vector Classifier (SVC).
+   Keempat model klasifikasi yang dipilih, yaitu _K-Nearest Neighbor_ (KNN), _Random Forest_, _Boosting Algorithm_, dan _Support Vector Classifier_ (SVC).
    - K-Nearest Neighbor (KNN):
    KNN adalah algoritma yang menggunakan data latihan terdekat dalam ruang fitur untuk memprediksi kelas dari data uji. Dalam konteks risiko kredit, KNN dapat digunakan untuk mencari pola atau kemiripan antara pengajuan pinjaman baru dengan pinjaman yang sudah ada. Model KNN dapat mengklasifikasikan pengajuan pinjaman baru sebagai risiko kredit tinggi jika memiliki tetangga yang sebagian besar memiliki riwayat kredit yang buruk.
-   - Random Forest:
-   Random Forest adalah algoritma ensemble yang menggabungkan beberapa pohon keputusan untuk menghasilkan prediksi akurat. Dalam kasus risiko kredit, Random Forest dapat mengevaluasi berbagai fitur seperti usia, pendapatan, riwayat kredit, dan lainnya untuk mengklasifikasikan pengajuan pinjaman baru sebagai risiko kredit rendah atau tinggi. Keunggulan Random Forest adalah dapat menangani variabel numerik dan kategorikal, serta mampu mengatasi overfitting.
-   - Boosting Algorithm:
-   Boosting Algorithm, seperti Gradient Boosting atau AdaBoost, adalah algoritma ensemble yang memadukan beberapa model kelemahan menjadi model yang kuat. Dalam konteks risiko kredit, Boosting Algorithm dapat memberikan bobot yang lebih besar kepada pengajuan pinjaman yang memiliki risiko kredit tinggi. Model Boosting dapat memperkuat kemampuan dalam mengklasifikasikan pengajuan pinjaman baru dengan risiko kredit yang lebih tinggi berdasarkan pengalaman belajar dari model sebelumnya.
-   - Support Vector Classifier (SVC):
-   SVC adalah algoritma yang membangun hyperplane atau sekumpulan hyperplane untuk melakukan klasifikasi. Dalam kasus risiko kredit, SVC dapat membangun pemisah antara pengajuan pinjaman yang berpotensi risiko tinggi dan rendah berdasarkan fitur-fitur yang relevan. Keunggulan SVC adalah dapat mengatasi masalah data yang tidak linier, sehingga cocok untuk mengklasifikasikan risiko kredit yang kompleks.
+   - _Random Forest_:
+   _Random Forest_ adalah algoritma _ensemble_ yang menggabungkan beberapa pohon keputusan untuk menghasilkan prediksi akurat. Dalam kasus risiko kredit, Random Forest dapat mengevaluasi berbagai fitur seperti usia, pendapatan, riwayat kredit, dan lainnya untuk mengklasifikasikan pengajuan pinjaman baru sebagai risiko kredit rendah atau tinggi. Keunggulan _Random Forest_ adalah dapat menangani variabel numerik dan kategorikal, serta mampu mengatasi _overfitting_.
+   - _Boosting Algorithm_:
+   _Boosting Algorithm_, seperti _Gradient Boosting_ atau _AdaBoost_, adalah algoritma _ensemble_ yang memadukan beberapa model kelemahan menjadi model yang kuat. Dalam konteks risiko kredit, _Boosting Algorithm_ dapat memberikan bobot yang lebih besar kepada pengajuan pinjaman yang memiliki risiko kredit tinggi. Model _Boosting_ dapat memperkuat kemampuan dalam mengklasifikasikan pengajuan pinjaman baru dengan risiko kredit yang lebih tinggi berdasarkan pengalaman belajar dari model sebelumnya.
+   - _Support Vector Classifier_ (SVC):
+   SVC adalah algoritma yang membangun _hyperplane_ atau sekumpulan hyperplane untuk melakukan klasifikasi. Dalam kasus risiko kredit, SVC dapat membangun pemisah antara pengajuan pinjaman yang berpotensi risiko tinggi dan rendah berdasarkan fitur-fitur yang relevan. Keunggulan SVC adalah dapat mengatasi masalah data yang tidak linier, sehingga cocok untuk mengklasifikasikan risiko kredit yang kompleks.
 
- KNN dapat mengidentifikasi pola berdasarkan kemiripan data, Random Forest memiliki kemampuan untuk menangani variabel numerik dan kategorikal serta menghindari overfitting, Boosting Algorithm dapat memperkuat kemampuan klasifikasi dengan penggabungan model, dan SVC dapat mengatasi masalah data yang tidak linier.
+ KNN dapat mengidentifikasi pola berdasarkan kemiripan data, _Random Forest_ memiliki kemampuan untuk menangani variabel numerik dan kategorikal serta menghindari _overfitting_, _Boosting Algorithm_ dapat memperkuat kemampuan klasifikasi dengan penggabungan model, dan SVC dapat mengatasi masalah data yang tidak linier.
  
  Dengan menggunakan kombinasi keempat model ini, dapat dimanfaatkan keunggulan masing-masing model dan meningkatkan akurasi serta kinerja dalam mengidentifikasi risiko kredit.
 
@@ -55,7 +55,7 @@ Tabel 1 variabel dan deskripsi data.
 |cb_preson_cred_hist_length| Durasi sejak peminjam memiliki catatan kredit yang tercatat|
 
 ## Data preparation
-1. Data Cleaning
+1. _Data Cleaning_
 
 ![Data null](https://github.com/novandristnjk/laporan/assets/110597813/429c0c08-1f04-4fdc-82dc-b2f729c55663)
 
@@ -82,27 +82,27 @@ Output:
 
 Terdapat 8 sampel missing value yang merupakan jumlah yang kecil dibandingkan total sampel. Oleh karena itu missing value tersebut dihapus. Setelah baris bernilai 0 dihapus, jumlah sampel atau baris data berubah menjadi 28638.
 
-2. Handling Outlier
+2. _Handling Outlier_
 
 ![Outlier 1](https://github.com/novandristnjk/laporan/assets/110597813/cead662c-bd53-436e-b500-6c998c81e0fc)
 
-Gambar 3. Boxplot variabel "person_age"
+Gambar 3. _Boxplo_t variabel "person_age"
 
 ![Outlier 2](https://github.com/novandristnjk/laporan/assets/110597813/61929f64-9e4b-433a-b892-7ad2b4d6cfc2)
 
-Gambar 4. Boxplot variabel "person_emp_length"
+Gambar 4. _Boxplot_ variabel "person_emp_length"
 
 ![Outlier 3](https://github.com/novandristnjk/laporan/assets/110597813/ab21d406-3221-441a-b247-30b4776ee11d)
 
-Gambar 5. Boxplot variabel "loan_amnt"
+Gambar 5. _Boxplot_ variabel "loan_amnt"
 
 ![Outlier 4](https://github.com/novandristnjk/laporan/assets/110597813/5c666cfa-8b89-4143-a7aa-f88bda0b089c)
 
-Gambar 6. Boxplot variabel "loan_percent_income"
+Gambar 6. _Boxplo_t variabel "loan_percent_income"
 
 dapat dilihat, pada beberapa fitur numerik di atas terdapat outliers. Outliers diidentifikasi menggunakan metode IQR  dan dihapus baris yang mengandung outliers.
 
-3. Feature Encoding
+3. _Feature Encoding_
 Terdapat empat variabel kategori dalam dataset, yaitu "person_home_ownership", "loan_grade", "loan_intent", dan "cb_person_default_on_file". Pada variabel "loan_grade" dan "cb_person_default_on_file" digunakan teknik LabelEncoding, karena kedua variabel tersebut memiliki tingkatan atau urutan yang terkait. Pada variabel "person_home_ownership" dan  "loan_intent" digunakan teknik OneHotEncoding, karena kedua variabel tersebut tidak memiliki tingkatan atau urutan yang terkait.
 
 4. Balancing Dataset

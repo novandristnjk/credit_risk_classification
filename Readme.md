@@ -35,9 +35,10 @@ Pengendalian pada Risiko kredit tentu dilakukan oleh setiap bank. Pengendalian t
  Dengan menggunakan kombinasi keempat model ini, dapat dimanfaatkan keunggulan masing-masing model dan meningkatkan akurasi serta kinerja dalam mengidentifikasi risiko kredit.
 
 ## Data Understanding
-Data yang digunakan dalam proyek ini adalah dataset Credit Risk yang berisi informasi tentang pengajuan pinjaman dan status kredit. Dataset ini dapat diunduh dari [kaggle](https://www.kaggle.com/datasets/laotse/credit-risk-dataset)
+Data yang digunakan dalam proyek ini adalah dataset Credit Risk yang berisi informasi tentang pengajuan pinjaman dan status kredit. Dataset ini dapat diunduh dari [kaggle](https://www.kaggle.com/datasets/laotse/credit-risk-dataset).
 
-Variabel-variabel dalam dataset Credit Risk meliputi:
+Tabel 1 variabel dan deskripsi data.
+
 | Variabel | Deskripsi |
 |-----|-----------|
 |person_age| Usia peminjam|
@@ -57,6 +58,7 @@ Variabel-variabel dalam dataset Credit Risk meliputi:
 1. Data Cleaning
 
 ![Data null](https://github.com/novandristnjk/laporan/assets/110597813/429c0c08-1f04-4fdc-82dc-b2f729c55663)
+Gambar 1. Data sebelum dibersihkan
 
 Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate sehingga perlu menghapus baris yang bernilai null.
 

@@ -37,6 +37,8 @@ Pengendalian pada Risiko kredit tentu dilakukan oleh setiap bank. Pengendalian t
 ## Data Understanding
 Data yang digunakan dalam proyek ini adalah dataset Credit Risk yang berisi informasi tentang pengajuan pinjaman dan status kredit. Dataset ini dapat diunduh dari [kaggle](https://www.kaggle.com/datasets/laotse/credit-risk-dataset).
 
+Tabel 1 variabel dan deskripsi data.
+
 | Variabel | Deskripsi |
 |-----|-----------|
 |person_age| Usia peminjam|
@@ -51,8 +53,6 @@ Data yang digunakan dalam proyek ini adalah dataset Credit Risk yang berisi info
 |loan_percent_income | Presentase pendapatan tahunan peminjam terhadap cicilan pinjaman|
 |cb_person_default_on_file| Riwayat kredit peminjam ("Y" menunjukkan bahwa peminjam memiliki riwayat gagal membayar kredit atau menunggak dalam catatan kreditnya. "N" menunjukkan bahwa peminjam tidak memiliki riwayat gagal membayar kredit atau menunggak dalam catatan kreditnya.)|
 |cb_preson_cred_hist_length| Durasi sejak peminjam memiliki catatan kredit yang tercatat|
-
-Tabel 1 variabel dan deskripsi data.
 
 ## Data preparation
 1. Data Cleaning
@@ -178,14 +178,14 @@ Rumus:
 
 F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text{{Precision}} + \text{{Recall}}}}$
 
+Tabel 2. Hasil evaluasi
+
 |          | Accuracy Train | Precision Train | Recall Train | F1-Score Train | Accuracy Test | Precision Test | Recall Test | F1-Score Test |
 |----------|----------------|-----------------|--------------|----------------|---------------|----------------|-------------|---------------|
 | KNN      | 0.926517       | 0.946743        | 0.903595     | 0.924666       | 0.915429      | 0.931892       | 0.899322    | 0.915317      |
 | RF       | 0.977048       | 0.998089        | 0.955842     | 0.976509       | 0.946182      | 0.984729       | 0.90819     | 0.944912      |
 | Boosting | 0.799057       | 0.826736        | 0.755771     | 0.789662       | 0.800106      | 0.838278       | 0.751695    | 0.792629      |
 | SVC      | 0.933854       | 0.979569        | 0.885944     | 0.930407       | 0.927359      | 0.97568        | 0.878978    | 0.924808      |
-
-Tabel 2. Hasil evaluasi
 
 Dalam analisis model berdasarkan evaluasi yang diberikan, terdapat beberapa metrik yang dipertimbangkan, yaitu akurasi (Accuracy), presisi (Precision), recall (Recall), dan f1-score.
 

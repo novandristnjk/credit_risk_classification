@@ -89,12 +89,15 @@ Terdapat 8 sampel missing value yang merupakan jumlah yang kecil dibandingkan to
 Gambar 3. Boxplot variabel "person_age"
 
 ![Outlier 2](https://github.com/novandristnjk/laporan/assets/110597813/61929f64-9e4b-433a-b892-7ad2b4d6cfc2)
+
 Gambar 4. Boxplot variabel "person_emp_length"
 
 ![Outlier 3](https://github.com/novandristnjk/laporan/assets/110597813/ab21d406-3221-441a-b247-30b4776ee11d)
+
 Gambar 5. Boxplot variabel "loan_amnt"
 
 ![Outlier 4](https://github.com/novandristnjk/laporan/assets/110597813/5c666cfa-8b89-4143-a7aa-f88bda0b089c)
+
 Gambar 6. Boxplot variabel "loan_percent_income"
 
 dapat dilihat, pada beberapa fitur numerik di atas terdapat outliers. Outliers diidentifikasi menggunakan metode IQR  dan dihapus baris yang mengandung outliers.

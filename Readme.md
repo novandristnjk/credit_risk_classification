@@ -86,7 +86,7 @@ Terdapat 8 sampel missing value yang merupakan jumlah yang kecil dibandingkan to
 
 ![Outlier 1](https://github.com/novandristnjk/laporan/assets/110597813/cead662c-bd53-436e-b500-6c998c81e0fc)
 
-Gambar 3. _Boxplo_t variabel "person_age"
+Gambar 3. _Boxplot_ variabel "person_age"
 
 ![Outlier 2](https://github.com/novandristnjk/laporan/assets/110597813/61929f64-9e4b-433a-b892-7ad2b4d6cfc2)
 
@@ -103,7 +103,7 @@ Gambar 6. _Boxplo_t variabel "loan_percent_income"
 dapat dilihat, pada beberapa fitur numerik di atas terdapat outliers. Outliers diidentifikasi menggunakan metode IQR  dan dihapus baris yang mengandung outliers.
 
 3. _Feature Encoding_
-Terdapat empat variabel kategori dalam dataset, yaitu "person_home_ownership", "loan_grade", "loan_intent", dan "cb_person_default_on_file". Pada variabel "loan_grade" dan "cb_person_default_on_file" digunakan teknik LabelEncoding, karena kedua variabel tersebut memiliki tingkatan atau urutan yang terkait. Pada variabel "person_home_ownership" dan  "loan_intent" digunakan teknik OneHotEncoding, karena kedua variabel tersebut tidak memiliki tingkatan atau urutan yang terkait.
+Terdapat empat variabel kategori dalam dataset, yaitu "person_home_ownership", "loan_grade", "loan_intent", dan "cb_person_default_on_file". Pada variabel "loan_grade" dan "cb_person_default_on_file" digunakan teknik LabelEncoding, karena kedua variabel tersebut memiliki tingkatan atau urutan yang terkait. Pada variabel "person_home_ownership" dan "loan_intent" digunakan teknik OneHotEncoding, karena kedua variabel tersebut tidak memiliki tingkatan atau urutan yang terkait.
 
 4. Balancing Dataset
 
@@ -111,68 +111,68 @@ Terdapat empat variabel kategori dalam dataset, yaitu "person_home_ownership", "
 
 Gambar 7. Perbandingan nilai 0 dan 1 pada fitur targer "loan_status"
 
-Dapat dilihat bahwa terjadi ketidakseimbangan data pada fitur target "loan_status", dimana nilai sangat jauh lebih banyak dibanding nilai 1. Ketidakseimbangan dataset dapat menghasilkan model yang tidak optimal dan bias terhadap kelas mayoritas. Untuk menyeimbangkan dataset dilakukan oversampling menggunakan metode SMOTE dengan menggandakan sampel pada fitur "loan_status"  yang bernilai 1. SMOTE bekerja dengan menciptakan sampel sintetis baru untuk kelas minoritas dengan menggunakan teknik interpolasi antara sampel yang sudah ada dalam kelas minoritas. Oversampling dipilih karena jika menggunakan metode undersampling, maka jumlah akan berkurang sangat besar sehingga dapat kehilangan informasi dari data yang dihilangkan.
+Dapat dilihat bahwa terjadi ketidakseimbangan data pada fitur target "loan_status", dimana nilai sangat jauh lebih banyak dibanding nilai 1. Ketidakseimbangan dataset dapat menghasilkan model yang tidak optimal dan bias terhadap kelas mayoritas. Untuk menyeimbangkan dataset dilakukan oversampling menggunakan metode _SMOTE_ dengan menggandakan sampel pada fitur "loan_status"  yang bernilai 1. _SMOTE_ bekerja dengan menciptakan sampel sintetis baru untuk kelas minoritas dengan menggunakan teknik interpolasi antara sampel yang sudah ada dalam kelas minoritas. Oversampling dipilih karena jika menggunakan metode undersampling, maka jumlah akan berkurang sangat besar sehingga dapat kehilangan informasi dari data yang dihilangkan.
 
-5. Train-Test Splitting : Memisahkan data menjadi data latihan (train) dan data uji (test) dengan perbandingan 90:10.
+5. _Train-Test Splitting_ : Memisahkan data menjadi data latihan (_train_) dan data uji (_test_) dengan perbandingan 90:10.
 
 ## Modeling
-Pada tahap ini digunakan empat model untuk mengklasifikasikan loan status, yaitu K-Nearest Neighbor, Random Forest Classifier, Boosting Algorithm, dan Support Vector Classifier.
-1. K-Nearest Neighbor:
+Pada tahap ini digunakan empat model untuk mengklasifikasikan loan status, yaitu _K-Nearest Neighbor_, _Random Forest Classifier_, _Boosting Algorithm_, dan _Support Vector Classifier_.
+1. _K-Nearest Neighbor_:
    - Jumlah tetangga : 10
-  Jumlah tetangga dalam K-Nearest Neighbors (KNN) adalah parameter yang digunakan untuk menentukan jumlah tetangga terdekat yang akan digunakan dalam proses klasifikasi atau regresi. KNN adalah sebuah algoritma pembelajaran mesin yang digunakan untuk melakukan klasifikasi atau regresi berdasarkan kumpulan data yang ada di sekitarnya. Dalam KNN, ketika akan mengklasifikasikan atau meramalkan label dari sebuah sampel data yang belum diketahui, algoritma mencari k-nearest neighbors (k-tetangga terdekat) dari sampel tersebut berdasarkan jarak euclidean atau metrik jarak lainnya. Jumlah tetangga menentukan berapa banyak tetangga terdekat yang akan digunakan dalam proses ini.
+  Jumlah tetangga dalam _K-Nearest Neighbors_ (KNN) adalah parameter yang digunakan untuk menentukan jumlah tetangga terdekat yang akan digunakan dalam proses klasifikasi atau regresi. KNN adalah sebuah algoritma pembelajaran mesin yang digunakan untuk melakukan klasifikasi atau regresi berdasarkan kumpulan data yang ada di sekitarnya. Dalam KNN, ketika akan mengklasifikasikan atau meramalkan label dari sebuah sampel data yang belum diketahui, algoritma mencari _k-nearest neighbors_ dari sampel tersebut berdasarkan jarak _euclidean_ atau metrik jarak lainnya. Jumlah tetangga menentukan berapa banyak tetangga terdekat yang akan digunakan dalam proses ini.
 
-2. Random Forest Classifier
+2. _Random Forest Classifier_
    - Jumlah pohon : 50
-   Jumlah pohon pada Random Forest adalah parameter yang menentukan berapa banyak pohon keputusan yang akan digunakan dalam ensemble. Random Forest adalah sebuah algoritma pembelajaran mesin yang menggabungkan beberapa pohon keputusan untuk melakukan klasifikasi atau regresi. Dalam Random Forest, setiap pohon keputusan dibangun secara independen dengan menggunakan subset acak dari data pelatihan. Jumlah pohon mengontrol berapa banyak pohon keputusan yang akan dibangun dalam ensemble. Semakin banyak pohon yang digunakan, semakin kompleks modelnya. Jumlah pohon yang lebih besar cenderung memberikan model yang lebih kuat dan lebih mampu menangkap hubungan yang kompleks dalam data. Namun, terlalu banyak pohon juga dapat menyebabkan overfitting, di mana model "menghafal" data pelatihan tetapi tidak umum untuk data yang tidak dilihat sebelumnya.
+   Jumlah pohon pada _Random Forest_ adalah parameter yang menentukan berapa banyak pohon keputusan yang akan digunakan dalam _ensemble_. _Random Forest_ adalah sebuah algoritma pembelajaran mesin yang menggabungkan beberapa pohon keputusan untuk melakukan klasifikasi atau regresi. Dalam _Random Forest_, setiap pohon keputusan dibangun secara independen dengan menggunakan subset acak dari data pelatihan. Jumlah pohon mengontrol berapa banyak pohon keputusan yang akan dibangun dalam _ensemble_. Semakin banyak pohon yang digunakan, semakin kompleks modelnya. Jumlah pohon yang lebih besar cenderung memberikan model yang lebih kuat dan lebih mampu menangkap hubungan yang kompleks dalam data. Namun, terlalu banyak pohon juga dapat menyebabkan _overfitting_, di mana model "menghafal" data pelatihan tetapi tidak umum untuk data yang tidak dilihat sebelumnya.
    - Kedalaman maksimum pohon : 16
-   Kedalaman maksimum pohon adalah parameter yang digunakan dalam pohon keputusan dan beberapa algoritma berbasis pohon lainnya, seperti Random Forest. Max_depth menentukan seberapa dalam pohon keputusan dapat tumbuh dengan membatasi jumlah tingkat atau simpul dalam pohon.
-    Ketika membangun pohon keputusan, algoritma akan membagi setiap simpul berdasarkan fitur dan ambil keputusan berdasarkan kriteria yang ditentukan, seperti gain informasi atau gini impurity. Dengan setiap pembagian, pohon tumbuh lebih dalam dengan menambahkan tingkat baru. Kedalaman maksimum pohon mengatur seberapa banyak tingkat yang diizinkan dalam pohon tersebut.
-    Membatasi kedalaman maksimum pohon adalah langkah yang penting untuk mencegah overfitting. Jika pohon memiliki kedalaman yang sangat besar, ia dapat dengan mudah "menghafal" data pelatihan dengan sangat spesifik, tetapi akan cenderung tidak mampu melakukan generalisasi dengan baik pada data baru. Dalam kasus tersebut, model akan terlalu kompleks dan sensitif terhadap noise atau variasi kecil dalam data pelatihan.
+   Kedalaman maksimum pohon adalah parameter yang digunakan dalam pohon keputusan dan beberapa algoritma berbasis pohon lainnya, seperti _Random Forest_. _Max_depth_ menentukan seberapa dalam pohon keputusan dapat tumbuh dengan membatasi jumlah tingkat atau simpul dalam pohon.
+    Ketika membangun pohon keputusan, algoritma akan membagi setiap simpul berdasarkan fitur dan ambil keputusan berdasarkan kriteria yang ditentukan, seperti gain informasi atau _gini impurity_. Dengan setiap pembagian, pohon tumbuh lebih dalam dengan menambahkan tingkat baru. Kedalaman maksimum pohon mengatur seberapa banyak tingkat yang diizinkan dalam pohon tersebut.
+    Membatasi kedalaman maksimum pohon adalah langkah yang penting untuk mencegah _overfitting_. Jika pohon memiliki kedalaman yang sangat besar, ia dapat dengan mudah "menghafal" data pelatihan dengan sangat spesifik, tetapi akan cenderung tidak mampu melakukan generalisasi dengan baik pada data baru. Dalam kasus tersebut, model akan terlalu kompleks dan sensitif terhadap noise atau variasi kecil dalam data pelatihan.
    - Random State : 55
-   Random State adalah parameter yang digunakan dalam algoritma pembelajaran mesin untuk mengontrol randomization atau keacakan yang terkait dengan model. Ketika model menggunakan algoritma yang melibatkan elemen keacakan, seperti inisialisasi bobot, pembagian data, atau pembangunan model, random_state memungkinkan pengguna untuk menetapkan nilai awal yang tetap sehingga model dapat menghasilkan hasil yang konsisten setiap kali dijalankan dengan nilai random_state yang sama.
-    Dalam konteks algoritma pembelajaran mesin, seperti pemisahan data menjadi set pelatihan dan pengujian, pengacakan urutan data, atau inisialisasi bobot dalam beberapa model, penggunaan random_state memungkinkan replikabilitas atau reproduktibilitas yang diinginkan. Dengan menetapkan nilai random_state yang sama, kita dapat memastikan bahwa model akan menghasilkan hasil yang serupa setiap kali dijalankan.
-    Random_state biasanya dinyatakan dalam bentuk bilangan bulat, dan nilai yang digunakan tidak terlalu penting. Yang penting adalah bahwa nilai random_state yang sama akan menghasilkan hasil yang sama. Namun, penting untuk dicatat bahwa mengubah nilai random_state dapat menghasilkan model yang berbeda, dan dengan demikian, penting untuk melakukan eksperimen dan validasi model menggunakan variasi nilai random_state untuk memahami stabilitas dan performa model secara menyeluruh.
-   - Jumlah job : 1
-   Jumlah job (n_jobs) adalah parameter yang digunakan dalam Random Forest untuk mengontrol paralelisasi atau penggunaan multiple core atau CPU dalam proses pembangunan pohon keputusan. Random Forest dapat membangun pohon keputusan secara independen dan paralel untuk mempercepat proses pelatihan.
-    Nilai n_jobs menentukan berapa banyak pekerjaan yang akan dijalankan secara paralel. Jika n_jobs diatur sebagai -1, maka semua core atau CPU yang tersedia akan digunakan untuk melatih model secara paralel. Jika n_jobs diatur sebagai nilai positif, maka jumlah core atau CPU yang digunakan akan sesuai dengan nilai n_jobs yang ditentukan.
+   _Random State_ adalah parameter yang digunakan dalam algoritma pembelajaran mesin untuk mengontrol randomization atau keacakan yang terkait dengan model. Ketika model menggunakan algoritma yang melibatkan elemen keacakan, seperti inisialisasi bobot, pembagian data, atau pembangunan model, random_state memungkinkan pengguna untuk menetapkan nilai awal yang tetap sehingga model dapat menghasilkan hasil yang konsisten setiap kali dijalankan dengan nilai random_state yang sama.
+    Dalam konteks algoritma pembelajaran mesin, seperti pemisahan data menjadi set pelatihan dan pengujian, pengacakan urutan data, atau inisialisasi bobot dalam beberapa model, penggunaan _random_state_ memungkinkan replikabilitas atau reproduktibilitas yang diinginkan. Dengan menetapkan nilai random_state yang sama, kita dapat memastikan bahwa model akan menghasilkan hasil yang serupa setiap kali dijalankan.
+    _Random_state_ biasanya dinyatakan dalam bentuk bilangan bulat, dan nilai yang digunakan tidak terlalu penting. Yang penting adalah bahwa nilai _random_state_ yang sama akan menghasilkan hasil yang sama. Namun, penting untuk dicatat bahwa mengubah nilai _random_state_ dapat menghasilkan model yang berbeda, dan dengan demikian, penting untuk melakukan eksperimen dan validasi model menggunakan variasi nilai random_state untuk memahami stabilitas dan performa model secara menyeluruh.
+   - Jumlah _job_ : 1
+   Jumlah _job_ (_n_jobs_) adalah parameter yang digunakan dalam _Random Forest_ untuk mengontrol paralelisasi atau penggunaan _multiple core_ atau CPU dalam proses pembangunan pohon keputusan. _Random Forest_ dapat membangun pohon keputusan secara independen dan paralel untuk mempercepat proses pelatihan.
+    Nilai _n_jobs_ menentukan berapa banyak pekerjaan yang akan dijalankan secara paralel. Jika _n_jobs_ diatur sebagai -1, maka semua core atau CPU yang tersedia akan digunakan untuk melatih model secara paralel. Jika n_jobs diatur sebagai nilai positif, maka jumlah core atau CPU yang digunakan akan sesuai dengan nilai n_jobs yang ditentukan.
 3. Boosting Algorithm
    - Tingkat pembelajaran : 0.05
-   Tingkat pembelajaran (learning_rate) adalah parameter yang digunakan dalam algoritma boosting untuk mengontrol seberapa banyak setiap model kecil atau pohon keputusan berkontribusi terhadap model ensemble akhir. Algoritma boosting seperti Gradient Boosting dan AdaBoost membangun model secara iteratif dengan menambahkan model kecil berulang kali ke ensemble.
-    Learning rate menentukan seberapa banyak bobot yang diberikan kepada model kecil yang baru ditambahkan ke ensemble pada setiap iterasi. Semakin tinggi learning rate, semakin besar pengaruh model baru dalam memperbaiki kesalahan model sebelumnya. Namun, nilai learning rate yang terlalu tinggi dapat menyebabkan model overfitting pada data pelatihan.
-   - Random State : 55
-   Random State pada algoritma boosting mengacu pada parameter yang digunakan untuk mengontrol inisialisasi keacakan dalam algoritma. Algoritma boosting, seperti Gradient Boosting dan AdaBoost, melibatkan penggunaan beberapa model kecil yang diiterasi untuk meningkatkan performa model ensemble.
-    Random State digunakan untuk menetapkan nilai awal yang tetap dalam inisialisasi keacakan yang terkait dengan algoritma boosting. Dengan menetapkan random_state dengan nilai tertentu, kita dapat memastikan bahwa proses inisialisasi yang melibatkan pengacakan nilai, misalnya dalam memilih subset data atau menentukan inisialisasi bobot, akan menghasilkan hasil yang konsisten setiap kali algoritma dijalankan dengan nilai random_state yang sama.
-4. Support Vector Classifier
+   Tingkat pembelajaran (_learning_rate_) adalah parameter yang digunakan dalam algoritma boosting untuk mengontrol seberapa banyak setiap model kecil atau pohon keputusan berkontribusi terhadap model _ensemble_ akhir. Algoritma boosting seperti _Gradient Boosting_ dan _AdaBoost_ membangun model secara iteratif dengan menambahkan model kecil berulang kali ke ensemble.
+    _Learning rate_ menentukan seberapa banyak bobot yang diberikan kepada model kecil yang baru ditambahkan ke ensemble pada setiap iterasi. Semakin tinggi _learning rate_, semakin besar pengaruh model baru dalam memperbaiki kesalahan model sebelumnya. Namun, nilai _learning rate_ yang terlalu tinggi dapat menyebabkan model _overfitting_ pada data pelatihan.
+   - _Random State_ : 55
+   _Random State_ pada algoritma boosting mengacu pada parameter yang digunakan untuk mengontrol inisialisasi keacakan dalam algoritma. _Algoritma boosting_, seperti _Gradient Boosting_ dan _AdaBoost_, melibatkan penggunaan beberapa model kecil yang diiterasi untuk meningkatkan performa model _ensemble_.
+    _Random State_ digunakan untuk menetapkan nilai awal yang tetap dalam inisialisasi keacakan yang terkait dengan _algoritma boosting_. Dengan menetapkan _random_state_ dengan nilai tertentu, kita dapat memastikan bahwa proses inisialisasi yang melibatkan pengacakan nilai, misalnya dalam memilih subset data atau menentukan inisialisasi bobot, akan menghasilkan hasil yang konsisten setiap kali algoritma dijalankan dengan nilai _random_state_ yang sama.
+4. _Support Vector Classifier_
 
 ## Evaluation
-Metrik evaluasi yang digunakan dalam proyek ini adalah akurasi, presisi (precision), recall, dan F1-score.
+Metrik evaluasi yang digunakan dalam proyek ini adalah akurasi, presisi (_precision_), _recall_, dan _F1-score_.
 
 1. Akurasi
-Kelebihan utama akurasi adalah memberikan gambaran umum tentang sejauh mana model dapat melakukan prediksi yang benar secara keseluruhan. Metrik ini cocok digunakan ketika kelas positif dan kelas negatif memiliki bobot yang seimbang dalam dataset. Namun, akurasi tidak memberikan informasi rinci tentang jenis kesalahan yang dibuat oleh model. Jika terdapat ketidakseimbangan antara jumlah sampel dalam kelas positif dan kelas negatif, akurasi mungkin menjadi tidak representatif. Dalam kasus tersebut, metrik evaluasi lain seperti presisi, recall, dan F1-score bisa memberikan informasi yang lebih bermanfaat.
+Kelebihan utama akurasi adalah memberikan gambaran umum tentang sejauh mana model dapat melakukan prediksi yang benar secara keseluruhan. Metrik ini cocok digunakan ketika kelas positif dan kelas negatif memiliki bobot yang seimbang dalam dataset. Namun, akurasi tidak memberikan informasi rinci tentang jenis kesalahan yang dibuat oleh model. Jika terdapat ketidakseimbangan antara jumlah sampel dalam kelas positif dan kelas negatif, akurasi mungkin menjadi tidak representatif. Dalam kasus tersebut, metrik evaluasi lain seperti presisi, _recall_, dan _F1-score_ bisa memberikan informasi yang lebih bermanfaat.
 
 Rumus:
 
 Akurasi = $\frac{{\text{{True Positive}} + \text{{True Negative}}}}{{\text{{True Positive}} + \text{{True Negative}} + \text{{False Positive}} + \text{{False Negative}}}}$
 
-2. Presisi(Precision)
-Presisi menggambarkan sejauh mana model dapat mengidentifikasi dengan benar kasus positif dari prediksi positif yang dilakukan. Metrik ini penting ketika fokus utama adalah mengurangi kesalahan positif palsu (misclassification yang mengatakan bahwa suatu sampel adalah positif ketika sebenarnya negatif).
+2. Presisi(_Precision_)
+Presisi menggambarkan sejauh mana model dapat mengidentifikasi dengan benar kasus positif dari prediksi positif yang dilakukan. Metrik ini penting ketika fokus utama adalah mengurangi kesalahan positif palsu (_misclassification_ yang mengatakan bahwa suatu sampel adalah positif ketika sebenarnya negatif).
 Presisi berguna dalam kasus di mana kesalahan positif palsu memiliki konsekuensi yang lebih serius, misalnya dalam sistem deteksi penyakit di mana kesalahan diagnosis positif palsu dapat menyebabkan kecemasan yang tidak perlu atau pengobatan yang tidak perlu.
 
 Rumus:
 
 Precision = $\frac{{\text{{True Positive}}}}{{\text{{True Positive}} + \text{{False Positive}}}}$
 
-3. Recall
-Recall (juga dikenal sebagai sensitivitas atau true positive rate) menggambarkan sejauh mana model dapat menemukan atau mengenali kasus positif secara keseluruhan dari semua kasus positif yang ada. Metrik ini penting ketika fokus utama adalah mengurangi kesalahan negatif palsu (misclassification yang mengatakan bahwa suatu sampel adalah negatif ketika sebenarnya positif).
+3. _Recall_
+_Recall_ (juga dikenal sebagai sensitivitas atau _true positive rate_) menggambarkan sejauh mana model dapat menemukan atau mengenali kasus positif secara keseluruhan dari semua kasus positif yang ada. Metrik ini penting ketika fokus utama adalah mengurangi kesalahan negatif palsu (_misclassification_ yang mengatakan bahwa suatu sampel adalah negatif ketika sebenarnya positif).
 Recall berguna dalam kasus di mana kesalahan negatif palsu memiliki konsekuensi yang lebih serius, misalnya dalam sistem deteksi kejahatan atau deteksi penyakit serius, di mana kesalahan mengabaikan kasus positif dapat berdampak besar.
 
 Rumus:
 
 Recall = $\frac{{\text{{True Positive}}}}{{\text{{True Positive}} + \text{{False Negative}}}}$
 
-4. F1-Score
-F1-score adalah harmonik rata-rata presisi dan recall, yang memberikan kompromi antara keduanya. Metrik ini berguna ketika kita ingin menyeimbangkan presisi dan recall secara seimbang, terutama dalam kasus di mana kelas positif dan kelas negatif memiliki distribusi yang tidak seimbang dalam dataset.
-F1-score berguna ketika ada ketidakseimbangan antara presisi dan recall yang diinginkan. Misalnya, dalam kasus deteksi spam email, di mana kita ingin meminimalkan kesalahan positif palsu (presisi tinggi) dan kesalahan negatif palsu (recall tinggi) secara bersamaan.
+4. _F1-Score_
+_F1-score_ adalah harmonik rata-rata presisi dan _recall_, yang memberikan kompromi antara keduanya. Metrik ini berguna ketika kita ingin menyeimbangkan presisi dan _recall_ secara seimbang, terutama dalam kasus di mana kelas positif dan kelas negatif memiliki distribusi yang tidak seimbang dalam dataset.
+_F1-score_ berguna ketika ada ketidakseimbangan antara presisi dan recall yang diinginkan. Misalnya, dalam kasus deteksi spam email, di mana kita ingin meminimalkan kesalahan positif palsu (presisi tinggi) dan kesalahan negatif palsu (_recall_ tinggi) secara bersamaan.
 
 Rumus:
 
@@ -188,10 +188,9 @@ Tabel 2. Hasil evaluasi
 | Boosting | 0.799057       | 0.826736        | 0.755771     | 0.789662       | 0.800106      | 0.838278       | 0.751695    | 0.792629      |
 | SVC      | 0.933854       | 0.979569        | 0.885944     | 0.930407       | 0.927359      | 0.97568        | 0.878978    | 0.924808      |
 
-Dalam analisis model berdasarkan evaluasi yang diberikan, terdapat beberapa metrik yang dipertimbangkan, yaitu akurasi (Accuracy), presisi (Precision), recall (Recall), dan f1-score.
+Dalam analisis model berdasarkan evaluasi yang diberikan, terdapat beberapa metrik yang dipertimbangkan, yaitu akurasi (_Accuracy_), presisi (_Precision_), _Recall_, dan _f1-score_.
 
-Jika kita fokus pada akurasi, model Random Forest (RF) memiliki akurasi tertinggi pada data train dan data test. Ini menunjukkan kemampuan model untuk secara konsisten melakukan klasifikasi yang akurat pada data train dan test. Jika kita mempertimbangkan presisi dan recall pada data train dan data test, Random Forest memiliki nilai presisi dan recall yang seimbang baik pada data latih maupun data uji. Dalam konteks klasifikasi risiko kredit, penting untuk memiliki presisi yang tinggi (menghindari banyak kesalahan positif) dan recall yang tinggi (menghindari banyak kesalahan negatif). RF memberikan keseimbangan yang baik antara kedua metrik ini.
-Selain itu, Random Forest juga memiliki nilai f1-score yang paling tinggi. F1-Score menggabungkan presisi dan recall menjadi satu metrik. RF memberikan skor F1-Score yang baik pada data latih maupun data uji, menunjukkan kemampuannya dalam mengklasifikasikan risiko kredit secara akurat dan seimbang.
+Jika kita fokus pada akurasi, model _Random Forest_ (RF) memiliki akurasi tertinggi pada data train dan data test. Ini menunjukkan kemampuan model untuk secara konsisten melakukan klasifikasi yang akurat pada data _train_ dan _test_. Jika kita mempertimbangkan presisi dan _recall_ pada data _train_ dan data _test_, _Random Forest_ memiliki nilai presisi dan _recall_ yang seimbang baik pada data latih maupun data uji. Dalam konteks klasifikasi risiko kredit, penting untuk memiliki presisi yang tinggi (menghindari banyak kesalahan positif) dan recall yang tinggi (menghindari banyak kesalahan negatif). RF memberikan keseimbangan yang baik antara kedua metrik ini.
+Selain itu, _Random Forest juga_ memiliki nilai _f1-score_ yang paling tinggi. _F1-Score_ menggabungkan presisi dan _recall_ menjadi satu metrik. RF memberikan skor _F1-Score_ yang baik pada data latih maupun data uji, menunjukkan kemampuannya dalam mengklasifikasikan risiko kredit secara akurat dan seimbang.
 
-Random Forest adalah model ensemble yang menggabungkan beberapa pohon keputusan. Kelebihan dari model ensemble adalah kemampuannya dalam menangani kompleksitas data dan mengurangi overfitting. Dalam klasifikasi risiko kredit, di mana terdapat banyak faktor yang mempengaruhi keputusan, model ensemble seperti RF dapat memberikan performa yang lebih baik daripada model lain yang lebih sederhana. Oleh karena itu lebih baik untuk menggunakan model Random Forest untuk membuat model machine learning klasifikasi yang dapat digunakan untuk mengidentifikasi risiko kredit.
-
+_Random Forest_ adalah model ensemble yang menggabungkan beberapa pohon keputusan. Kelebihan dari model ensemble adalah kemampuannya dalam menangani kompleksitas data dan mengurangi _overfitting_. Dalam klasifikasi risiko kredit, di mana terdapat banyak faktor yang mempengaruhi keputusan, model _ensemble_ seperti RF dapat memberikan performa yang lebih baik daripada model lain yang lebih sederhana. Oleh karena itu lebih baik untuk menggunakan model _Random Forest_ untuk membuat model _machine learning_ klasifikasi yang dapat digunakan untuk mengidentifikasi risiko kredit.

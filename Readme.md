@@ -194,3 +194,6 @@ Jika kita fokus pada akurasi, model _Random Forest_ (RF) memiliki akurasi tertin
 Selain itu, _Random Forest juga_ memiliki nilai _f1-score_ yang paling tinggi. _F1-Score_ menggabungkan presisi dan _recall_ menjadi satu metrik. RF memberikan skor _F1-Score_ yang baik pada data latih maupun data uji, menunjukkan kemampuannya dalam mengklasifikasikan risiko kredit secara akurat dan seimbang.
 
 _Random Forest_ adalah model ensemble yang menggabungkan beberapa pohon keputusan. Kelebihan dari model ensemble adalah kemampuannya dalam menangani kompleksitas data dan mengurangi _overfitting_. Dalam klasifikasi risiko kredit, di mana terdapat banyak faktor yang mempengaruhi keputusan, model _ensemble_ seperti RF dapat memberikan performa yang lebih baik daripada model lain yang lebih sederhana. Oleh karena itu lebih baik untuk menggunakan model _Random Forest_ untuk membuat model _machine learning_ klasifikasi yang dapat digunakan untuk mengidentifikasi risiko kredit.
+
+## Reference
+

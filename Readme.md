@@ -64,7 +64,7 @@ Gambar 1. Data bernilai null sebelum dibersihkan
 
 Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate sehingga perlu menghapus baris yang bernilai null.
 
-![describe](https://github.com/novandristnjk/laporan/assets/110597813/b36b4dfc-8225-4e01-8007-490adb2ff3ce)
+<img width="497" alt="describe" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/4ef0afb9-fef5-4085-b831-28fa1394459d">
 
 Gambar 2. Deskripsi data
 
@@ -78,25 +78,25 @@ print("Nilai 0 di kolom loan_percent_income ada: ", loan_percent_income)
 
 Output:
 
-![output missing value](https://github.com/novandristnjk/laporan/assets/110597813/cc2f4cf2-88e7-4ac4-8eed-3ac38627946d)
+<img width="216" alt="output" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/f2d244ba-e91c-41ac-8165-ca1400a1e95f">
 
 Terdapat 8 sampel missing value yang merupakan jumlah yang kecil dibandingkan total sampel. Oleh karena itu missing value tersebut dihapus. Setelah baris bernilai 0 dihapus, jumlah sampel atau baris data berubah menjadi 28638.
 
 2. _Handling Outlier_
 
-![Outlier 1](https://github.com/novandristnjk/laporan/assets/110597813/cead662c-bd53-436e-b500-6c998c81e0fc)
+<img width="310" alt="person age" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/d01f1954-0b14-47c3-acc9-4e89f98a2970">
 
 Gambar 3. _Boxplot_ variabel "person_age"
 
-![Outlier 2](https://github.com/novandristnjk/laporan/assets/110597813/61929f64-9e4b-433a-b892-7ad2b4d6cfc2)
+<img width="308" alt="person emp length" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/a4f6d1cf-ee1e-411b-9071-9ceb6b11d33a">
 
 Gambar 4. _Boxplot_ variabel "person_emp_length"
 
-![Outlier 3](https://github.com/novandristnjk/laporan/assets/110597813/ab21d406-3221-441a-b247-30b4776ee11d)
+<img width="302" alt="loan amnt" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/55460fff-1743-42cb-9625-f7e01a55bd4f">
 
 Gambar 5. _Boxplot_ variabel "loan_amnt"
 
-![Outlier 4](https://github.com/novandristnjk/laporan/assets/110597813/5c666cfa-8b89-4143-a7aa-f88bda0b089c)
+<img width="306" alt="loan percent income" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/706d23ef-d8e8-42e6-a954-448482cecd3f">
 
 Gambar 6. _Boxplo_t variabel "loan_percent_income"
 
@@ -107,7 +107,7 @@ Terdapat empat variabel kategori dalam dataset, yaitu "person_home_ownership", "
 
 4. Balancing Dataset
 
-![Imballance Dataset](https://github.com/novandristnjk/laporan/assets/110597813/6f7ecc05-6591-432d-a468-1eccef08aac7)
+<img width="348" alt="loan status distribution" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/7a88939e-c3f3-47aa-b3a7-ac7707d19d4d">
 
 Gambar 7. Perbandingan nilai 0 dan 1 pada fitur targer "loan_status"
 

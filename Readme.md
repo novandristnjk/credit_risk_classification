@@ -197,6 +197,8 @@ _Random Forest_ adalah model ensemble yang menggabungkan beberapa pohon keputusa
 
 ## Reference
 
-[1]   Ikatan Bankir Indonesia, "Manajemen Risiko 2 Mengidentifikasi Risiko, Likuiditas, Reputasi, Hukum, Kepatuhan, Dan Strategik Bank". Jakarta. Gramedia Pustaka Utama.
-[2]   M. Desda, Yurasti "Manajemen Risiko 2 Mengidentifikasi Risiko, Likuiditas, Reputasi, Hukum, Kepatuhan, Dan Strategik Bank". Jakarta. Gramedia Pustaka Utama.
-[3]   T. Getahun, L. Anwen, dan M. S. Bari"MCredit Risk Management and Its Impact on Performance of Commercial Banks: In of Case Ethiopia ". Ethiopia. J. Finance. Accounting.
+[1]   IBI, "Manajemen Risiko 2 Mengidentifikasi Risiko, Likuiditas, Reputasi, Hukum, Kepatuhan, Dan Strategik Bank". _Gramedia Pustaka Utama, 2015_.
+
+[2]   M. Desda, Yurasti "Analisis Penerapan Manajemen Risiko Kredit Dalam Meminimalisir Kredit Bermasalah Pada PT. BPR Swadaya Anak Nagari Bandarejo Simpang Empat Periode 2013-2018". _J. MBIA. Vol. 18., no. 1, 2019_.
+
+[3]   T. Getahun, L. Anwen, dan M. S. Bari"MCredit Risk Management and Its Impact on Performance of Commercial Banks: In of Case Ethiopia ". _J. Finance. Accounting. Vol. 04., no. 16, 2016_.

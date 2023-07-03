@@ -12,12 +12,10 @@ Kredit disamping memberikan sumbangan terbesar terhadap laba, kredit juga merupa
 Pengendalian pada Risiko kredit tentu dilakukan oleh setiap bank. Pengendalian tersebut diantisipasi oleh kualitas suatu sistem manajemen risiko kredit yang baik untuk meminimalkan risiko kredit. Evaluasi kredit yang akurat menjadi sangat penting dan berguna sebagai salah satu input alternative dalam mempertahankan kondisi perbankan agar tetap stabil.
 
 ## Problem Statements
-1. Bagaimana mengidentifikasi risiko kredit dengan akurat dan efektif untuk mengurangi tingkat kredit bermasalah dan meningkatkan kinerja Bank?
-2. Bagaimana mengembangkan model klasifikasi yang dapat memprediksi risiko kredit secara efektif?
+1. Bagaimana mengembangkan model klasifikasi yang dapat memprediksi risiko kredit dengan akurasi, presisi, _recall_, dan _f1-score_ minimal 90% ?
 
 ## Goals
-1. Mengembangkan model klasifikasi dengan akurasi minimal 90% untuk mengidentifikasi risiko kredit.
-2. Meningkatkan performa model klasifikasi dalam memprediksi risiko kredit.
+1. mengembangkan model klasifikasi yang dapat memprediksi risiko kredit dengan akurasi, presisi, _recall_, dan _f1-score_ minimal 90% .
 
 ## Solution Statement
    Keempat model klasifikasi yang dipilih, yaitu _K-Nearest Neighbor_ (KNN), _Random Forest_, _Boosting Algorithm_, dan _Support Vector Classifier_ (SVC).

@@ -12,8 +12,8 @@ Kredit disamping memberikan sumbangan terbesar terhadap laba, kredit juga merupa
 Pengendalian pada Risiko kredit tentu dilakukan oleh setiap bank. Pengendalian tersebut diantisipasi oleh kualitas suatu sistem manajemen risiko kredit yang baik untuk meminimalkan risiko kredit. Evaluasi kredit yang akurat menjadi sangat penting dan berguna sebagai salah satu input alternative dalam mempertahankan kondisi perbankan agar tetap stabil.
 
 ## Problem Statements
-1. Bagaimana kita dapat mengidentifikasi risiko kredit dengan akurat dan efektif untuk mengurangi tingkat kredit bermasalah dan meningkatkan kinerja Bank?
-2. Bagaimana kita dapat mengembangkan model klasifikasi yang dapat memprediksi risiko kredit secara efektif?
+1. Bagaimana mengidentifikasi risiko kredit dengan akurat dan efektif untuk mengurangi tingkat kredit bermasalah dan meningkatkan kinerja Bank?
+2. Bagaimana mengembangkan model klasifikasi yang dapat memprediksi risiko kredit secara efektif?
 
 ## Goals
 1. Mengembangkan model klasifikasi dengan akurasi minimal 90% untuk mengidentifikasi risiko kredit.
@@ -25,14 +25,12 @@ Pengendalian pada Risiko kredit tentu dilakukan oleh setiap bank. Pengendalian t
    KNN adalah algoritma yang menggunakan data latihan terdekat dalam ruang fitur untuk memprediksi kelas dari data uji. Dalam konteks risiko kredit, KNN dapat digunakan untuk mencari pola atau kemiripan antara pengajuan pinjaman baru dengan pinjaman yang sudah ada. Model KNN dapat mengklasifikasikan pengajuan pinjaman baru sebagai risiko kredit tinggi jika memiliki tetangga yang sebagian besar memiliki riwayat kredit yang buruk.
    - _Random Forest_:
    _Random Forest_ adalah algoritma _ensemble_ yang menggabungkan beberapa pohon keputusan untuk menghasilkan prediksi akurat. Dalam kasus risiko kredit, Random Forest dapat mengevaluasi berbagai fitur seperti usia, pendapatan, riwayat kredit, dan lainnya untuk mengklasifikasikan pengajuan pinjaman baru sebagai risiko kredit rendah atau tinggi. Keunggulan _Random Forest_ adalah dapat menangani variabel numerik dan kategorikal, serta mampu mengatasi _overfitting_.
-   - _Boosting Algorithm_:
-   _Boosting Algorithm_, seperti _Gradient Boosting_ atau _AdaBoost_, adalah algoritma _ensemble_ yang memadukan beberapa model kelemahan menjadi model yang kuat. Dalam konteks risiko kredit, _Boosting Algorithm_ dapat memberikan bobot yang lebih besar kepada pengajuan pinjaman yang memiliki risiko kredit tinggi. Model _Boosting_ dapat memperkuat kemampuan dalam mengklasifikasikan pengajuan pinjaman baru dengan risiko kredit yang lebih tinggi berdasarkan pengalaman belajar dari model sebelumnya.
    - _Support Vector Classifier_ (SVC):
    SVC adalah algoritma yang membangun _hyperplane_ atau sekumpulan hyperplane untuk melakukan klasifikasi. Dalam kasus risiko kredit, SVC dapat membangun pemisah antara pengajuan pinjaman yang berpotensi risiko tinggi dan rendah berdasarkan fitur-fitur yang relevan. Keunggulan SVC adalah dapat mengatasi masalah data yang tidak linier, sehingga cocok untuk mengklasifikasikan risiko kredit yang kompleks.
 
- KNN dapat mengidentifikasi pola berdasarkan kemiripan data, _Random Forest_ memiliki kemampuan untuk menangani variabel numerik dan kategorikal serta menghindari _overfitting_, _Boosting Algorithm_ dapat memperkuat kemampuan klasifikasi dengan penggabungan model, dan SVC dapat mengatasi masalah data yang tidak linier.
+ KNN dapat mengidentifikasi pola berdasarkan kemiripan data, _Random Forest_ memiliki kemampuan untuk menangani variabel numerik dan kategorikal serta menghindari _overfitting_, dan SVC dapat mengatasi masalah data yang tidak linier.
  
- Dengan menggunakan kombinasi keempat model ini, dapat dimanfaatkan keunggulan masing-masing model dan meningkatkan akurasi serta kinerja dalam mengidentifikasi risiko kredit.
+ Dengan menggunakan kombinasi ketiga model ini, dapat dimanfaatkan keunggulan masing-masing model dan meningkatkan akurasi serta kinerja dalam mengidentifikasi risiko kredit.
 
 ## Data Understanding
 Data yang digunakan dalam proyek ini adalah dataset Credit Risk yang berisi informasi tentang pengajuan pinjaman dan status kredit. Dataset ini dapat diunduh dari [kaggle](https://www.kaggle.com/datasets/laotse/credit-risk-dataset).
@@ -125,7 +123,7 @@ Dapat dilihat bahwa terjadi ketidakseimbangan data pada fitur target "loan_statu
 5. _Train-Test Splitting_ : Memisahkan data menjadi data latihan (_train_) dan data uji (_test_) dengan perbandingan 90:10.
 
 ## Modeling
-Pada tahap ini digunakan empat model untuk mengklasifikasikan loan status, yaitu _K-Nearest Neighbor_, _Random Forest Classifier_, _Boosting Algorithm_, dan _Support Vector Classifier_.
+Pada tahap ini digunakan empat model untuk mengklasifikasikan loan status, yaitu _K-Nearest Neighbor_, _Random Forest Classifier_, dan _Support Vector Classifier_.
 1. _K-Nearest Neighbor_:
    - Jumlah tetangga : 10
   Jumlah tetangga dalam _K-Nearest Neighbors_ (KNN) adalah parameter yang digunakan untuk menentukan jumlah tetangga terdekat yang akan digunakan dalam proses klasifikasi atau regresi. KNN adalah sebuah algoritma pembelajaran mesin yang digunakan untuk melakukan klasifikasi atau regresi berdasarkan kumpulan data yang ada di sekitarnya. Dalam KNN, ketika akan mengklasifikasikan atau meramalkan label dari sebuah sampel data yang belum diketahui, algoritma mencari _k-nearest neighbors_ dari sampel tersebut berdasarkan jarak _euclidean_ atau metrik jarak lainnya. Jumlah tetangga menentukan berapa banyak tetangga terdekat yang akan digunakan dalam proses ini.
@@ -144,14 +142,7 @@ Pada tahap ini digunakan empat model untuk mengklasifikasikan loan status, yaitu
    - Jumlah _job_ : 1
    Jumlah _job_ (_n_jobs_) adalah parameter yang digunakan dalam _Random Forest_ untuk mengontrol paralelisasi atau penggunaan _multiple core_ atau CPU dalam proses pembangunan pohon keputusan. _Random Forest_ dapat membangun pohon keputusan secara independen dan paralel untuk mempercepat proses pelatihan.
     Nilai _n_jobs_ menentukan berapa banyak pekerjaan yang akan dijalankan secara paralel. Jika _n_jobs_ diatur sebagai -1, maka semua core atau CPU yang tersedia akan digunakan untuk melatih model secara paralel. Jika n_jobs diatur sebagai nilai positif, maka jumlah core atau CPU yang digunakan akan sesuai dengan nilai n_jobs yang ditentukan.
-3. Boosting Algorithm
-   - Tingkat pembelajaran : 0.05
-   Tingkat pembelajaran (_learning_rate_) adalah parameter yang digunakan dalam algoritma boosting untuk mengontrol seberapa banyak setiap model kecil atau pohon keputusan berkontribusi terhadap model _ensemble_ akhir. Algoritma boosting seperti _Gradient Boosting_ dan _AdaBoost_ membangun model secara iteratif dengan menambahkan model kecil berulang kali ke ensemble.
-    _Learning rate_ menentukan seberapa banyak bobot yang diberikan kepada model kecil yang baru ditambahkan ke ensemble pada setiap iterasi. Semakin tinggi _learning rate_, semakin besar pengaruh model baru dalam memperbaiki kesalahan model sebelumnya. Namun, nilai _learning rate_ yang terlalu tinggi dapat menyebabkan model _overfitting_ pada data pelatihan.
-   - _Random State_ : 55
-   _Random State_ pada algoritma boosting mengacu pada parameter yang digunakan untuk mengontrol inisialisasi keacakan dalam algoritma. _Algoritma boosting_, seperti _Gradient Boosting_ dan _AdaBoost_, melibatkan penggunaan beberapa model kecil yang diiterasi untuk meningkatkan performa model _ensemble_.
-    _Random State_ digunakan untuk menetapkan nilai awal yang tetap dalam inisialisasi keacakan yang terkait dengan _algoritma boosting_. Dengan menetapkan _random_state_ dengan nilai tertentu, kita dapat memastikan bahwa proses inisialisasi yang melibatkan pengacakan nilai, misalnya dalam memilih subset data atau menentukan inisialisasi bobot, akan menghasilkan hasil yang konsisten setiap kali algoritma dijalankan dengan nilai _random_state_ yang sama.
-4. _Support Vector Classifier_
+3. _Support Vector Classifier_
 
 ## Evaluation
 Metrik evaluasi yang digunakan dalam proyek ini adalah akurasi, presisi (_precision_), _recall_, dan _F1-score_.

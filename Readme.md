@@ -64,7 +64,16 @@ Gambar 1. Data bernilai null sebelum dibersihkan
 
 Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate sehingga perlu menghapus baris yang bernilai null.
 
-<img width="497" alt="describe" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/4ef0afb9-fef5-4085-b831-28fa1394459d">
+|index|person\_age|person\_income|person\_emp\_length|loan\_amnt|loan\_int\_rate|loan\_status|loan\_percent\_income|cb\_person\_cred\_hist\_length|
+|---|---|---|---|---|---|---|---|---|
+|count|28638\.0|28638\.0|28638\.0|28638\.0|28638\.0|28638\.0|28638\.0|28638\.0|
+|mean|27\.727215587680703|66649\.37188351141|4\.788672393323556|9656\.493121028005|11\.039866610796844|0\.21660032125148404|0\.1694880927439067|5\.793735596061177|
+|std|6\.310440916909462|62356\.44740470853|4\.154626670183479|6329\.683360684426|3\.2293717597794616|0\.4119351252907461|0\.10639251098884496|4\.038482503165891|
+|min|20\.0|4000\.0|0\.0|500\.0|5\.42|0\.0|0\.0|2\.0|
+|25%|23\.0|39480\.0|2\.0|5000\.0|7\.9|0\.0|0\.09|3\.0|
+|50%|26\.0|55956\.0|4\.0|8000\.0|10\.99|0\.0|0\.15|4\.0|
+|75%|30\.0|80000\.0|7\.0|12500\.0|13\.48|0\.0|0\.23|8\.0|
+|max|144\.0|6000000\.0|123\.0|35000\.0|23\.22|1\.0|0\.83|30\.0|
 
 Gambar 2. Deskripsi data
 

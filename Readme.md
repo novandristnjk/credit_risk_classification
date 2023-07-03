@@ -75,19 +75,7 @@ Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate 
 
 Gambar 2. Deskripsi data
 
-Dari hasil fungsi describe(), nilai minimum untuk kolom "loan_percent_income" adalah 0. "loan_percent_income" merupakan presentase pendapatan tahunan peminjam terhadap cicilan pinjaman sehingga tidak mungkin ada yang bernilai 0 jika tidak ada "loan_amnt" atau jumlah pinjaman yang bernilai 0. Dilakukan pengecekan ada berapa missing value pada kolom "loan_percent_income":
-
-```
-loan_percent_income = (df.loan_percent_income == 0).sum()
-
-print("Nilai 0 di kolom loan_percent_income ada: ", loan_percent_income)
-```
-
-Output:
-
-<img width="216" alt="output" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/f2d244ba-e91c-41ac-8165-ca1400a1e95f">
-
-Terdapat 8 sampel missing value yang merupakan jumlah yang kecil dibandingkan total sampel. Oleh karena itu missing value tersebut dihapus. Setelah baris bernilai 0 dihapus, jumlah sampel atau baris data berubah menjadi 28638.
+Dari hasil fungsi describe(), nilai minimum untuk kolom "loan_percent_income" adalah 0. "loan_percent_income" merupakan presentase pendapatan tahunan peminjam terhadap cicilan pinjaman sehingga tidak mungkin ada yang bernilai 0 jika tidak ada "loan_amnt" atau jumlah pinjaman yang bernilai 0. Dilakukan pengecekan ada berapa missing value pada kolom "loan_percent_income", terdapat 8 sampel missing value yang merupakan jumlah yang kecil dibandingkan total sampel. Oleh karena itu missing value tersebut dihapus. Setelah baris bernilai 0 dihapus, jumlah sampel atau baris data berubah menjadi 28638.
 
 2. _Handling Outlier_
 

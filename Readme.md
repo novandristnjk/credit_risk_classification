@@ -60,6 +60,7 @@ Tabel 1 variabel dan deskripsi data.
     }
 </style>
 
+
 <img src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/da450a01-b775-4943-978c-8f3cadaf2b31" alt="data cleaning" class="gambar-perbesar">
 
 Gambar 1. Data bernilai null sebelum dibersihkan

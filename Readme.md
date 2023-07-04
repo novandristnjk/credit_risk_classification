@@ -53,12 +53,6 @@ Tabel 1 variabel dan deskripsi data.
 ## Data preparation
 1. _Data Cleaning_
 
-<style>
-    .gambar-perbesar {
-        width: 500px;
-        height: auto;
-    }
-</style>
 
 <img src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/da450a01-b775-4943-978c-8f3cadaf2b31" alt="data cleaning" class="gambar-perbesar">
 

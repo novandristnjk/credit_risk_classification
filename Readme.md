@@ -54,7 +54,7 @@ Tabel 1 variabel dan deskripsi data.
 1. _Data Cleaning_
 
 
-<img src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/da450a01-b775-4943-978c-8f3cadaf2b31" alt="data cleaning" class="gambar-perbesar">
+<img width="491" alt="data cleaning" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/a09efac0-1b08-4e8b-8a3e-939ffccf6701">
 
 
 Gambar 1. Data bernilai null sebelum dibersihkan

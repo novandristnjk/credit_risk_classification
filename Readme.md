@@ -78,19 +78,19 @@ Dari hasil fungsi describe(), nilai minimum untuk kolom "loan_percent_income" ad
 
 2. _Handling Outlier_
 
-<img width="310" alt="person age" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/d01f1954-0b14-47c3-acc9-4e89f98a2970">
+<img width="491" alt="person_age" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/81e1e21b-0eeb-413a-bac0-453e7c7556b7">
 
 Gambar 3. _Boxplot_ variabel "person_age"
 
-<img width="308" alt="person emp length" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/a4f6d1cf-ee1e-411b-9071-9ceb6b11d33a">
+<img width="491" alt="person_emp_length" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/b001a497-4869-465a-896e-8b4c84dc31ff">
 
 Gambar 4. _Boxplot_ variabel "person_emp_length"
 
-<img width="302" alt="loan amnt" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/55460fff-1743-42cb-9625-f7e01a55bd4f">
+<img width="491" alt="loan_amnt" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/6817e0c1-0ddc-4787-99aa-9986e8fc3aaa">
 
 Gambar 5. _Boxplot_ variabel "loan_amnt"
 
-<img width="306" alt="loan percent income" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/706d23ef-d8e8-42e6-a954-448482cecd3f">
+<img width="491" alt="person_income" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/f27af1d0-635b-4c0d-926b-4f8ccd45f799">
 
 Gambar 6. _Boxplo_t variabel "loan_percent_income"
 
@@ -101,7 +101,7 @@ Terdapat empat variabel kategori dalam dataset, yaitu "person_home_ownership", "
 
 4. Balancing Dataset
 
-<img width="348" alt="loan status distribution" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/7a88939e-c3f3-47aa-b3a7-ac7707d19d4d">
+<img width="491" alt="loan_status_distribution" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/8363633a-7521-4f58-ba40-5f7c3590e36d">
 
 Gambar 7. Perbandingan nilai 0 dan 1 pada fitur targer "loan_status"
 

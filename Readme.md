@@ -174,6 +174,13 @@ Tabel 2. Hasil evaluasi
 |RF|0\.9774602239245728|0\.9981520266108168|0\.956609008796269|0\.9769390769601786|0\.9467126193001061|0\.9880546075085325|0\.9061032863849765|0\.9453061224489796|
 |SVC|0\.9342663523865645|0\.9795878440067823|0\.8867701753350257|0\.9308710067238868|0\.926033934252386|0\.975609756097561|0\.8763693270735524|0\.9233305853256389|
 
+| Model | Accuracy Train | Precision Train | Recall Train | F1 Score Train | Accuracy Test | Precision Test | Recall Test | F1 Score Test |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| KNN | 0.93 | 0.95 | 0.90 | 0.92 | 0.91 | 0.93 | 0.89 | 0.91 |
+| RF | 0.98 | 1.00 | 0.96 | 0.98 | 0.95 | 0.99 | 0.91 | 0.95 |
+| SVC | 0.93 | 0.98 | 0.89 | 0.93 | 0.93 | 0.98 | 0.88 | 0.92 |
+
+
 Dalam analisis model berdasarkan evaluasi yang diberikan, terdapat beberapa metrik yang dipertimbangkan, yaitu akurasi (_Accuracy_), presisi (_Precision_), _Recall_, dan _f1-score_.
 
 Jika kita fokus pada akurasi, model _Random Forest_ (RF) memiliki akurasi tertinggi pada data train dan data test. Ini menunjukkan kemampuan model untuk secara konsisten melakukan klasifikasi yang akurat pada data _train_ dan _test_. Jika kita mempertimbangkan presisi dan _recall_ pada data _train_ dan data _test_, _Random Forest_ memiliki nilai presisi dan _recall_ yang seimbang baik pada data latih maupun data uji. Dalam konteks klasifikasi risiko kredit, penting untuk memiliki presisi yang tinggi (menghindari banyak kesalahan positif) dan recall yang tinggi (menghindari banyak kesalahan negatif). RF memberikan keseimbangan yang baik antara kedua metrik ini.

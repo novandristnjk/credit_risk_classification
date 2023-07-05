@@ -110,7 +110,8 @@ Gambar 7. Perbandingan nilai 0 dan 1 pada fitur targer "loan_status"
 
 Dapat dilihat bahwa terjadi ketidakseimbangan data pada fitur target "loan_status", dimana nilai sangat jauh lebih banyak dibanding nilai 1. Ketidakseimbangan dataset dapat menghasilkan model yang tidak optimal dan bias terhadap kelas mayoritas. Untuk menyeimbangkan dataset dilakukan oversampling menggunakan metode _SMOTE_ dengan menggandakan sampel pada fitur "loan_status"  yang bernilai 1. _SMOTE_ bekerja dengan menciptakan sampel sintetis baru untuk kelas minoritas dengan menggunakan teknik interpolasi antara sampel yang sudah ada dalam kelas minoritas. Oversampling dipilih karena jika menggunakan metode undersampling, maka jumlah akan berkurang sangat besar sehingga dapat kehilangan informasi dari data yang dihilangkan.
 
-### _Train-Test Splitting_ : Memisahkan data menjadi data latihan (_train_) dan data uji (_test_) dengan perbandingan 90:10.
+### _Train-Test Splitting_
+Memisahkan data menjadi data latihan (_train_) dan data uji (_test_) dengan perbandingan 90:10.
 
 ## Modeling
 Pada tahap ini digunakan empat model untuk mengklasifikasikan loan status, yaitu _K-Nearest Neighbor_, _Random Forest Classifier_, dan _Support Vector Classifier_.

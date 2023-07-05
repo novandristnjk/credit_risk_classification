@@ -53,6 +53,7 @@ Tabel 1 variabel dan deskripsi data.
 |cb_preson_cred_hist_length| Durasi sejak peminjam memiliki catatan kredit yang tercatat|
 
 ## Data preparation
+
 ### _Data Cleaning_
 
 
@@ -78,7 +79,7 @@ Gambar 2. Deskripsi data
 
 Dari hasil fungsi describe(), nilai minimum untuk kolom "loan_percent_income" adalah 0. "loan_percent_income" merupakan presentase pendapatan tahunan peminjam terhadap cicilan pinjaman sehingga tidak mungkin ada yang bernilai 0 jika tidak ada "loan_amnt" atau jumlah pinjaman yang bernilai 0. Dilakukan pengecekan ada berapa missing value pada kolom "loan_percent_income", terdapat 8 sampel missing value yang merupakan jumlah yang kecil dibandingkan total sampel. Oleh karena itu missing value tersebut dihapus. Setelah baris bernilai 0 dihapus, jumlah sampel atau baris data berubah menjadi 28638.
 
-2. _Handling Outlier_
+### _Handling Outlier_
 
 <img width="491" alt="person_age" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/81e1e21b-0eeb-413a-bac0-453e7c7556b7">
 
@@ -98,10 +99,10 @@ Gambar 6. _Boxplo_t variabel "loan_percent_income"
 
 dapat dilihat, pada beberapa fitur numerik di atas terdapat outliers. Outliers diidentifikasi menggunakan metode IQR  dan dihapus baris yang mengandung outliers.
 
-3. _Feature Encoding_
+### _Feature Encoding_
 Terdapat empat variabel kategori dalam dataset, yaitu "person_home_ownership", "loan_grade", "loan_intent", dan "cb_person_default_on_file". Pada variabel "loan_grade" dan "cb_person_default_on_file" digunakan teknik LabelEncoding, karena kedua variabel tersebut memiliki tingkatan atau urutan yang terkait. Pada variabel "person_home_ownership" dan "loan_intent" digunakan teknik OneHotEncoding, karena kedua variabel tersebut tidak memiliki tingkatan atau urutan yang terkait.
 
-4. Balancing Dataset
+### Balancing Dataset
 
 <img width="491" alt="loan_status_distribution" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/8363633a-7521-4f58-ba40-5f7c3590e36d">
 
@@ -109,7 +110,7 @@ Gambar 7. Perbandingan nilai 0 dan 1 pada fitur targer "loan_status"
 
 Dapat dilihat bahwa terjadi ketidakseimbangan data pada fitur target "loan_status", dimana nilai sangat jauh lebih banyak dibanding nilai 1. Ketidakseimbangan dataset dapat menghasilkan model yang tidak optimal dan bias terhadap kelas mayoritas. Untuk menyeimbangkan dataset dilakukan oversampling menggunakan metode _SMOTE_ dengan menggandakan sampel pada fitur "loan_status"  yang bernilai 1. _SMOTE_ bekerja dengan menciptakan sampel sintetis baru untuk kelas minoritas dengan menggunakan teknik interpolasi antara sampel yang sudah ada dalam kelas minoritas. Oversampling dipilih karena jika menggunakan metode undersampling, maka jumlah akan berkurang sangat besar sehingga dapat kehilangan informasi dari data yang dihilangkan.
 
-5. _Train-Test Splitting_ : Memisahkan data menjadi data latihan (_train_) dan data uji (_test_) dengan perbandingan 90:10.
+### _Train-Test Splitting_ : Memisahkan data menjadi data latihan (_train_) dan data uji (_test_) dengan perbandingan 90:10.
 
 ## Modeling
 Pada tahap ini digunakan empat model untuk mengklasifikasikan loan status, yaitu _K-Nearest Neighbor_, _Random Forest Classifier_, dan _Support Vector Classifier_.
@@ -136,14 +137,14 @@ Pada tahap ini digunakan empat model untuk mengklasifikasikan loan status, yaitu
 ## Evaluation
 Metrik evaluasi yang digunakan dalam proyek ini adalah akurasi, presisi (_precision_), _recall_, dan _F1-score_.
 
-1. Akurasi
+### Akurasi
 Kelebihan utama akurasi adalah memberikan gambaran umum tentang sejauh mana model dapat melakukan prediksi yang benar secara keseluruhan. Metrik ini cocok digunakan ketika kelas positif dan kelas negatif memiliki bobot yang seimbang dalam dataset. Namun, akurasi tidak memberikan informasi rinci tentang jenis kesalahan yang dibuat oleh model. Jika terdapat ketidakseimbangan antara jumlah sampel dalam kelas positif dan kelas negatif, akurasi mungkin menjadi tidak representatif. Dalam kasus tersebut, metrik evaluasi lain seperti presisi, _recall_, dan _F1-score_ bisa memberikan informasi yang lebih bermanfaat.
 
 Rumus:
 
 Akurasi = $\frac{{\text{{True Positive}} + \text{{True Negative}}}}{{\text{{True Positive}} + \text{{True Negative}} + \text{{False Positive}} + \text{{False Negative}}}}$
 
-2. Presisi(_Precision_)
+### Presisi(_Precision_)
 Presisi menggambarkan sejauh mana model dapat mengidentifikasi dengan benar kasus positif dari prediksi positif yang dilakukan. Metrik ini penting ketika fokus utama adalah mengurangi kesalahan positif palsu (_misclassification_ yang mengatakan bahwa suatu sampel adalah positif ketika sebenarnya negatif).
 Presisi berguna dalam kasus di mana kesalahan positif palsu memiliki konsekuensi yang lebih serius, misalnya dalam sistem deteksi penyakit di mana kesalahan diagnosis positif palsu dapat menyebabkan kecemasan yang tidak perlu atau pengobatan yang tidak perlu.
 
@@ -151,7 +152,7 @@ Rumus:
 
 Precision = $\frac{{\text{{True Positive}}}}{{\text{{True Positive}} + \text{{False Positive}}}}$
 
-3. _Recall_
+### _Recall_
 _Recall_ (juga dikenal sebagai sensitivitas atau _true positive rate_) menggambarkan sejauh mana model dapat menemukan atau mengenali kasus positif secara keseluruhan dari semua kasus positif yang ada. Metrik ini penting ketika fokus utama adalah mengurangi kesalahan negatif palsu (_misclassification_ yang mengatakan bahwa suatu sampel adalah negatif ketika sebenarnya positif).
 Recall berguna dalam kasus di mana kesalahan negatif palsu memiliki konsekuensi yang lebih serius, misalnya dalam sistem deteksi kejahatan atau deteksi penyakit serius, di mana kesalahan mengabaikan kasus positif dapat berdampak besar.
 
@@ -159,7 +160,7 @@ Rumus:
 
 Recall = $\frac{{\text{{True Positive}}}}{{\text{{True Positive}} + \text{{False Negative}}}}$
 
-4. _F1-Score_
+### _F1-Score_
 _F1-score_ adalah harmonik rata-rata presisi dan _recall_, yang memberikan kompromi antara keduanya. Metrik ini berguna ketika kita ingin menyeimbangkan presisi dan _recall_ secara seimbang, terutama dalam kasus di mana kelas positif dan kelas negatif memiliki distribusi yang tidak seimbang dalam dataset.
 _F1-score_ berguna ketika ada ketidakseimbangan antara presisi dan recall yang diinginkan. Misalnya, dalam kasus deteksi spam email, di mana kita ingin meminimalkan kesalahan positif palsu (presisi tinggi) dan kesalahan negatif palsu (_recall_ tinggi) secara bersamaan.
 

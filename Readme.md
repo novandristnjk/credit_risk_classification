@@ -43,6 +43,8 @@ Dengan pemahaman yang baik tentang kebutuhan bisnis dan implementasi yang tepat,
 ## Data Understanding
 Dataset yang digunakan dalam proyek ini adalah Credit Risk Dataset yang berisi informasi tentang data riwayat pinjaman dan status kredit. Dataset ini dapat diunduh dari [kaggle](https://www.kaggle.com/datasets/laotse/credit-risk-dataset). Dataset ini memiliki 12 variabel dan 32581 baris data, berikut variabel-variabel yang terdapat pada dataset.
 
+__Tabel 1 variabel dan deskripsi data.__
+
 | Variabel | Deskripsi |
 |-----|-----------|
 |person_age| Usia peminjam|
@@ -57,8 +59,6 @@ Dataset yang digunakan dalam proyek ini adalah Credit Risk Dataset yang berisi i
 |loan_percent_income | Presentase pendapatan tahunan peminjam terhadap cicilan pinjaman|
 |cb_person_default_on_file| Riwayat kredit peminjam ("Y" menunjukkan bahwa peminjam memiliki riwayat gagal membayar kredit atau menunggak dalam catatan kreditnya. "N" menunjukkan bahwa peminjam tidak memiliki riwayat gagal membayar kredit atau menunggak dalam catatan kreditnya.)|
 |cb_preson_cred_hist_length| Durasi sejak peminjam memiliki catatan kredit yang tercatat|
-
-__Tabel 1 variabel dan deskripsi data.__
 
 ## Data preparation
 
@@ -191,7 +191,7 @@ Rumus:
 
 F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text{{Precision}} + \text{{Recall}}}}$
 
-__Tabel 3. Hasil evaluasi__
+__Tabel 4. Hasil evaluasi__
 
 | Model | Accuracy Train | Precision Train | Recall Train | F1 Score Train | Accuracy Test | Precision Test | Recall Test | F1 Score Test |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -207,6 +207,8 @@ Selain itu, _Random Forest juga_ memiliki nilai _f1-score_ yang paling tinggi. _
 _Random Forest_ adalah model ensemble yang menggabungkan beberapa pohon keputusan. Kelebihan dari model ensemble adalah kemampuannya dalam menangani kompleksitas data dan mengurangi _overfitting_. Dalam klasifikasi risiko kredit, di mana terdapat banyak faktor yang mempengaruhi keputusan, model _ensemble_ seperti RF dapat memberikan performa yang lebih baik daripada model lain yang lebih sederhana. Oleh karena itu lebih baik untuk menggunakan model _Random Forest_ untuk membuat model _machine learning_ klasifikasi yang dapat digunakan untuk mengidentifikasi risiko kredit.
 
 ## Conclusion
+
+
 
 ## Reference
 

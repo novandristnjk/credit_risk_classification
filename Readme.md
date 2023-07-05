@@ -35,8 +35,6 @@ Pengendalian pada Risiko kredit tentu dilakukan oleh setiap bank. Pengendalian t
 ## Data Understanding
 Data yang digunakan dalam proyek ini adalah dataset Credit Risk yang berisi informasi tentang pengajuan pinjaman dan status kredit. Dataset ini dapat diunduh dari [kaggle](https://www.kaggle.com/datasets/laotse/credit-risk-dataset).
 
-Tabel 1 variabel dan deskripsi data.
-
 | Variabel | Deskripsi |
 |-----|-----------|
 |person_age| Usia peminjam|
@@ -51,6 +49,8 @@ Tabel 1 variabel dan deskripsi data.
 |loan_percent_income | Presentase pendapatan tahunan peminjam terhadap cicilan pinjaman|
 |cb_person_default_on_file| Riwayat kredit peminjam ("Y" menunjukkan bahwa peminjam memiliki riwayat gagal membayar kredit atau menunggak dalam catatan kreditnya. "N" menunjukkan bahwa peminjam tidak memiliki riwayat gagal membayar kredit atau menunggak dalam catatan kreditnya.)|
 |cb_preson_cred_hist_length| Durasi sejak peminjam memiliki catatan kredit yang tercatat|
+
+Tabel 1 variabel dan deskripsi data.
 
 ## Data preparation
 
@@ -87,7 +87,7 @@ Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate 
 |75%|30\.0|80000\.0|7\.0|12500\.0|13\.48|0\.0|0\.23|8\.0|
 |max|144\.0|6000000\.0|123\.0|35000\.0|23\.22|1\.0|0\.83|30\.0|
 
-Gambar 2. Deskripsi data
+Tabel 3. Deskripsi data
 
 Dari hasil fungsi describe(), nilai minimum untuk kolom "loan_percent_income" adalah 0. "loan_percent_income" merupakan presentase pendapatan tahunan peminjam terhadap cicilan pinjaman sehingga tidak mungkin ada yang bernilai 0 jika tidak ada "loan_amnt" atau jumlah pinjaman yang bernilai 0. Dilakukan pengecekan ada berapa missing value pada kolom "loan_percent_income", terdapat 8 sampel missing value yang merupakan jumlah yang kecil dibandingkan total sampel. Oleh karena itu missing value tersebut dihapus. Setelah baris bernilai 0 dihapus, jumlah sampel atau baris data berubah menjadi 28638.
 
@@ -95,19 +95,19 @@ Dari hasil fungsi describe(), nilai minimum untuk kolom "loan_percent_income" ad
 
 <img width="491" alt="person_age" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/81e1e21b-0eeb-413a-bac0-453e7c7556b7">
 
-Gambar 3. _Boxplot_ variabel "person_age"
+Gambar 1. _Boxplot_ variabel "person_age"
 
 <img width="491" alt="person_emp_length" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/b001a497-4869-465a-896e-8b4c84dc31ff">
 
-Gambar 4. _Boxplot_ variabel "person_emp_length"
+Gambar 2. _Boxplot_ variabel "person_emp_length"
 
 <img width="491" alt="loan_amnt" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/6817e0c1-0ddc-4787-99aa-9986e8fc3aaa">
 
-Gambar 5. _Boxplot_ variabel "loan_amnt"
+Gambar 3. _Boxplot_ variabel "loan_amnt"
 
 <img width="491" alt="person_income" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/f27af1d0-635b-4c0d-926b-4f8ccd45f799">
 
-Gambar 6. _Boxplo_t variabel "loan_percent_income"
+Gambar 4. _Boxplo_t variabel "loan_percent_income"
 
 dapat dilihat, pada beberapa fitur numerik di atas terdapat outliers. Outliers diidentifikasi menggunakan metode IQR  dan dihapus baris yang mengandung outliers.
 
@@ -118,7 +118,7 @@ Terdapat empat variabel kategori dalam dataset, yaitu "person_home_ownership", "
 
 <img width="491" alt="loan_status_distribution" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/8363633a-7521-4f58-ba40-5f7c3590e36d">
 
-Gambar 7. Perbandingan nilai 0 dan 1 pada fitur targer "loan_status"
+Gambar 5. Perbandingan nilai 0 dan 1 pada fitur targer "loan_status"
 
 Dapat dilihat bahwa terjadi ketidakseimbangan data pada fitur target "loan_status", dimana nilai sangat jauh lebih banyak dibanding nilai 1. Ketidakseimbangan dataset dapat menghasilkan model yang tidak optimal dan bias terhadap kelas mayoritas. Untuk menyeimbangkan dataset dilakukan oversampling menggunakan metode _SMOTE_ dengan menggandakan sampel pada fitur "loan_status"  yang bernilai 1. _SMOTE_ bekerja dengan menciptakan sampel sintetis baru untuk kelas minoritas dengan menggunakan teknik interpolasi antara sampel yang sudah ada dalam kelas minoritas. Oversampling dipilih karena jika menggunakan metode undersampling, maka jumlah akan berkurang sangat besar sehingga dapat kehilangan informasi dari data yang dihilangkan.
 
@@ -181,15 +181,13 @@ Rumus:
 
 F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text{{Precision}} + \text{{Recall}}}}$
 
-
-Tabel 2. Hasil evaluasi
-
 | Model | Accuracy Train | Precision Train | Recall Train | F1 Score Train | Accuracy Test | Precision Test | Recall Test | F1 Score Test |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KNN | 0.93 | 0.95 | 0.90 | 0.92 | 0.91 | 0.93 | 0.89 | 0.91 |
 | RF | 0.98 | 0.99 | 0.96 | 0.98 | 0.95 | 0.99 | 0.91 | 0.95 |
 | SVC | 0.93 | 0.98 | 0.89 | 0.93 | 0.93 | 0.98 | 0.88 | 0.92 |
 
+Tabel 3. Hasil evaluasi
 
 Dalam analisis model berdasarkan evaluasi yang diberikan, terdapat beberapa metrik yang dipertimbangkan, yaitu akurasi (_Accuracy_), presisi (_Precision_), _Recall_, dan _f1-score_.
 

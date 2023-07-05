@@ -50,12 +50,11 @@ Data yang digunakan dalam proyek ini adalah dataset Credit Risk yang berisi info
 |cb_person_default_on_file| Riwayat kredit peminjam ("Y" menunjukkan bahwa peminjam memiliki riwayat gagal membayar kredit atau menunggak dalam catatan kreditnya. "N" menunjukkan bahwa peminjam tidak memiliki riwayat gagal membayar kredit atau menunggak dalam catatan kreditnya.)|
 |cb_preson_cred_hist_length| Durasi sejak peminjam memiliki catatan kredit yang tercatat|
 
-Tabel 1 variabel dan deskripsi data.
+__Tabel 1 variabel dan deskripsi data.__
 
 ## Data preparation
 
 ### _Data Cleaning_
-
 
 |          variabel          | Jumlah Baris yang Berisi Data Null |
 |:--------------------------:|:----------------------------------:|
@@ -72,7 +71,7 @@ Tabel 1 variabel dan deskripsi data.
 | cb_person_default_on_file  |                  0                 |
 | cb_preson_cred_hist_length |                  0                 |
 
-Tabel 2. Data bernilai null sebelum dibersihkan
+__Tabel 2. Data bernilai null sebelum dibersihkan__
 
 Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate sehingga perlu menghapus baris yang bernilai null.
 
@@ -87,7 +86,7 @@ Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate 
 |75%|30\.0|80000\.0|7\.0|12500\.0|13\.48|0\.0|0\.23|8\.0|
 |max|144\.0|6000000\.0|123\.0|35000\.0|23\.22|1\.0|0\.83|30\.0|
 
-Tabel 3. Deskripsi data
+__Tabel 3. Deskripsi data__
 
 Dari hasil fungsi describe(), nilai minimum untuk kolom "loan_percent_income" adalah 0. "loan_percent_income" merupakan presentase pendapatan tahunan peminjam terhadap cicilan pinjaman sehingga tidak mungkin ada yang bernilai 0 jika tidak ada "loan_amnt" atau jumlah pinjaman yang bernilai 0. Dilakukan pengecekan ada berapa missing value pada kolom "loan_percent_income", terdapat 8 sampel missing value yang merupakan jumlah yang kecil dibandingkan total sampel. Oleh karena itu missing value tersebut dihapus. Setelah baris bernilai 0 dihapus, jumlah sampel atau baris data berubah menjadi 28638.
 
@@ -95,19 +94,19 @@ Dari hasil fungsi describe(), nilai minimum untuk kolom "loan_percent_income" ad
 
 <img width="491" alt="person_age" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/81e1e21b-0eeb-413a-bac0-453e7c7556b7">
 
-Gambar 1. _Boxplot_ variabel "person_age"
+__Gambar 1. _Boxplot_ variabel "person_age"__
 
 <img width="491" alt="person_emp_length" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/b001a497-4869-465a-896e-8b4c84dc31ff">
 
-Gambar 2. _Boxplot_ variabel "person_emp_length"
+__Gambar 2. _Boxplot_ variabel "person_emp_length"__
 
 <img width="491" alt="loan_amnt" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/6817e0c1-0ddc-4787-99aa-9986e8fc3aaa">
 
-Gambar 3. _Boxplot_ variabel "loan_amnt"
+__Gambar 3. _Boxplot_ variabel "loan_amnt"__
 
 <img width="491" alt="person_income" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/f27af1d0-635b-4c0d-926b-4f8ccd45f799">
 
-Gambar 4. _Boxplo_t variabel "loan_percent_income"
+__Gambar 4. _Boxplo_t variabel "loan_percent_income"___
 
 dapat dilihat, pada beberapa fitur numerik di atas terdapat outliers. Outliers diidentifikasi menggunakan metode IQR  dan dihapus baris yang mengandung outliers.
 
@@ -187,7 +186,7 @@ F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text
 | RF | 0.98 | 0.99 | 0.96 | 0.98 | 0.95 | 0.99 | 0.91 | 0.95 |
 | SVC | 0.93 | 0.98 | 0.89 | 0.93 | 0.93 | 0.98 | 0.88 | 0.92 |
 
-Tabel 3. Hasil evaluasi
+__Tabel 3. Hasil evaluasi__
 
 Dalam analisis model berdasarkan evaluasi yang diberikan, terdapat beberapa metrik yang dipertimbangkan, yaitu akurasi (_Accuracy_), presisi (_Precision_), _Recall_, dan _f1-score_.
 

@@ -201,7 +201,7 @@ __Tabel 3. Hasil evaluasi__
 
 ## Conclusion
 
-Dalam analisis model berdasarkan evaluasi yang diberikan, terdapat beberapa metrik yang dipertimbangkan, yaitu akurasi (_Accuracy_), presisi (_Precision_), _Recall_, dan _f1-score_.
+Dalam analisis model berdasarkan evaluasi yang diberikan, terdapat beberapa metrik yang dipertimbangkan, yaitu akurasi (_Accuracy_), presisi (_Precision_), _Recall_, dan _f1-score_. Dari hasil evaluasi, dapat dilihat bahwa model klasifikasi yang dibuat sudah baik dan  sudah cukup layak digunakan. Ketiga model baik model KNN, _Random Forest_, dan _Support Vector Machine_ memiliki akurasi, presisi, recall, dan f1-score minimal 88%.
 
 Jika kita fokus pada akurasi, model _Random Forest_ (RF) memiliki akurasi tertinggi pada data train dan data test. Ini menunjukkan kemampuan model untuk secara konsisten melakukan klasifikasi yang akurat pada data _train_ dan _test_. Jika kita mempertimbangkan presisi dan _recall_ pada data _train_ dan data _test_, _Random Forest_ memiliki nilai presisi dan _recall_ yang seimbang baik pada data latih maupun data uji. Dalam konteks klasifikasi risiko kredit, penting untuk memiliki presisi yang tinggi (menghindari banyak kesalahan positif) dan recall yang tinggi (menghindari banyak kesalahan negatif). RF memberikan keseimbangan yang baik antara kedua metrik ini.
 Selain itu, _Random Forest juga_ memiliki nilai _f1-score_ yang paling tinggi. _F1-Score_ menggabungkan presisi dan _recall_ menjadi satu metrik. RF memberikan skor _F1-Score_ yang baik pada data latih maupun data uji, menunjukkan kemampuannya dalam mengklasifikasikan risiko kredit secara akurat dan seimbang.

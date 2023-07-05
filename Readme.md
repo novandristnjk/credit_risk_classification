@@ -192,6 +192,8 @@ F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text
 
 __Tabel 3. Hasil evaluasi__
 
+### Kesimpulan
+
 Dalam analisis model berdasarkan evaluasi yang diberikan, terdapat beberapa metrik yang dipertimbangkan, yaitu akurasi (_Accuracy_), presisi (_Precision_), _Recall_, dan _f1-score_.
 
 Jika kita fokus pada akurasi, model _Random Forest_ (RF) memiliki akurasi tertinggi pada data train dan data test. Ini menunjukkan kemampuan model untuk secara konsisten melakukan klasifikasi yang akurat pada data _train_ dan _test_. Jika kita mempertimbangkan presisi dan _recall_ pada data _train_ dan data _test_, _Random Forest_ memiliki nilai presisi dan _recall_ yang seimbang baik pada data latih maupun data uji. Dalam konteks klasifikasi risiko kredit, penting untuk memiliki presisi yang tinggi (menghindari banyak kesalahan positif) dan recall yang tinggi (menghindari banyak kesalahan negatif). RF memberikan keseimbangan yang baik antara kedua metrik ini.

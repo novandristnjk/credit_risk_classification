@@ -13,6 +13,14 @@ Pengendalian pada Risiko kredit tentu dilakukan oleh setiap bank. Pengendalian t
 
 ## Business Understanding
 
+Implementasi model klasifikasi risiko kredit yang akurat dapat membantu institusi keuangan mengidentifikasi peluang risiko yang tinggi dan mengambil tindakan yang sesuai untuk mengelola portofolio pinjaman mereka. Dengan memiliki prediksi yang lebih baik tentang risiko kredit, institusi keuangan dapat mengurangi risiko gagal bayar, meningkatkan keuntungan, dan menjaga stabilitas keuangan mereka.
+
+Selain itu, model klasifikasi yang dapat memprediksi risiko kredit dengan akurasi tinggi juga dapat membantu dalam pengambilan keputusan yang lebih baik dan efisien. Institusi keuangan dapat menggunakan hasil prediksi model untuk menentukan tingkat bunga, persyaratan pinjaman, atau memutuskan apakah suatu pengajuan pinjaman harus disetujui atau ditolak.
+
+Namun, penting untuk diingat bahwa meskipun model klasifikasi dapat memberikan panduan dan rekomendasi yang berharga, keputusan akhir harus didasarkan pada evaluasi yang cermat oleh analis risiko yang berkualifikasi. Model hanya menjadi alat bantu untuk menginformasikan keputusan, dan manusia tetap memiliki peran penting dalam proses pengambilan keputusan.
+
+Dengan pemahaman yang baik tentang kebutuhan bisnis dan implementasi yang tepat, pengembangan model klasifikasi risiko kredit yang efektif dapat memberikan manfaat yang signifikan bagi institusi keuangan dalam pengelolaan risiko dan pengambilan keputusan yang lebih baik.
+
 ### Problem Statements
 1. Bagaimana mengembangkan model klasifikasi yang dapat memprediksi risiko kredit dengan akurasi, presisi, _recall_, dan _f1-score_ minimal 88% ?
 

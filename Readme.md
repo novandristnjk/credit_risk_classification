@@ -53,7 +53,7 @@ Tabel 1 variabel dan deskripsi data.
 |cb_preson_cred_hist_length| Durasi sejak peminjam memiliki catatan kredit yang tercatat|
 
 ## Data preparation
-1. _Data Cleaning_
+### _Data Cleaning_
 
 
 <img width="421" alt="data cleaning" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/a09efac0-1b08-4e8b-8a3e-939ffccf6701">

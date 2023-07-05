@@ -1,6 +1,6 @@
 # Laporan Proyek Machine Learning - Novandri Sitinjak
 
-## Latar Belakang
+## Domain Proyek
 Bank merupakan lembaga intermediasi yang bertugas menerima simpanan dari nasabah dan meminjamkannya kepada nasabah (unit ekonomi) lain yang membutuhkan dana. Atas simpanan masyarakat, bank memberikan imbalan berupa bunga. Demikian pula, atas pemberian pinjaman (kredit) bank mengenakan bunga kepada para peminjam. Dengan kata lain bank sebagai lembaga keuangan yang berfungsi menghimpun dan menyalurkan dana dari dan ke masyarakat untuk meningkatkan pelayanan kepada para nasabah tanpa mengabaikan etika perbankan[1].
 
 Salah satu kegiatan utama bank adalah menyalurkan dana kepada masyarakat dalam bentuk kredit. Hal ini didasarkan pada kenyataan bahwa perkreditan merupakan aktivitas terbesar pada perbankan. Besarnya jumlah kredit yang disalurkan akan menentukan keuntungan bank. Jika bank tidak mampu menyalurkan kredit sementara dana dari masyarakat banyak disimpan, maka alternative lain bank bisa menyalurkan dananya melalui pasar uang maupun pasar modal. Hal ini dilakukan untuk memperoleh keuntungan yang maksimal. Apabila bank tidak melakukan alternative lain selaain menyalurkan kredit maka bank akan mengalami kerugian, karena harus membayar bunga simpanan kepada masyarakat.
@@ -11,13 +11,15 @@ Kredit disamping memberikan sumbangan terbesar terhadap laba, kredit juga merupa
 
 Pengendalian pada Risiko kredit tentu dilakukan oleh setiap bank. Pengendalian tersebut diantisipasi oleh kualitas suatu sistem manajemen risiko kredit yang baik untuk meminimalkan risiko kredit. Evaluasi kredit yang akurat menjadi sangat penting dan berguna sebagai salah satu input alternative dalam mempertahankan kondisi perbankan agar tetap stabil.
 
-## Problem Statements
+## Business Understanding
+
+### Problem Statements
 1. Bagaimana mengembangkan model klasifikasi yang dapat memprediksi risiko kredit dengan akurasi, presisi, _recall_, dan _f1-score_ minimal 90% ?
 
-## Goals
+### Goals
 1. mengembangkan model klasifikasi yang dapat memprediksi risiko kredit dengan akurasi, presisi, _recall_, dan _f1-score_ minimal 90% .
 
-## Solution Statement
+### Solution Statement
    Keempat model klasifikasi yang dipilih, yaitu _K-Nearest Neighbor_ (KNN), _Random Forest_, _Boosting Algorithm_, dan _Support Vector Classifier_ (SVC).
    - K-Nearest Neighbor (KNN):
    KNN adalah algoritma yang menggunakan data latihan terdekat dalam ruang fitur untuk memprediksi kelas dari data uji. Dalam konteks risiko kredit, KNN dapat digunakan untuk mencari pola atau kemiripan antara pengajuan pinjaman baru dengan pinjaman yang sudah ada. Model KNN dapat mengklasifikasikan pengajuan pinjaman baru sebagai risiko kredit tinggi jika memiliki tetangga yang sebagian besar memiliki riwayat kredit yang buruk.

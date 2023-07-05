@@ -28,7 +28,7 @@ Dengan pemahaman yang baik tentang kebutuhan bisnis dan implementasi yang tepat,
 1. mengembangkan model klasifikasi yang dapat memprediksi risiko kredit dengan akurasi, presisi, _recall_, dan _f1-score_ minimal 88% .
 
 ### Solution Statement
-   Keempat model klasifikasi yang dipilih, yaitu _K-Nearest Neighbor_ (KNN), _Random Forest_, _Boosting Algorithm_, dan _Support Vector Classifier_ (SVC).
+   Ketiga model klasifikasi yang dipilih, yaitu _K-Nearest Neighbor_ (KNN), _Random Forest_, dan _Support Vector Classifier_ (SVC).
    - _K-Nearest Neighbor_ (KNN):
    KNN adalah algoritma yang menggunakan data latihan terdekat dalam ruang fitur untuk memprediksi kelas dari data uji. Dalam konteks risiko kredit, KNN dapat digunakan untuk mencari pola atau kemiripan antara pengajuan pinjaman baru dengan pinjaman yang sudah ada. Model KNN dapat mengklasifikasikan pengajuan pinjaman baru sebagai risiko kredit tinggi jika memiliki tetangga yang sebagian besar memiliki riwayat kredit yang buruk.
    - _Random Forest_:
@@ -133,7 +133,7 @@ Dapat dilihat bahwa terjadi ketidakseimbangan data pada fitur target "loan_statu
 Memisahkan data menjadi data latihan (_train_) dan data uji (_test_) dengan perbandingan 90:10.
 
 ## Modeling
-Pada tahap ini digunakan empat model untuk mengklasifikasikan loan status, yaitu _K-Nearest Neighbor_, _Random Forest Classifier_, dan _Support Vector Classifier_.
+Pada tahap ini digunakan tiga model untuk mengklasifikasikan loan status, yaitu _K-Nearest Neighbor_, _Random Forest Classifier_, dan _Support Vector Classifier_.
 1. _K-Nearest Neighbor_:
    - Jumlah tetangga : 10
   Jumlah tetangga dalam _K-Nearest Neighbors_ (KNN) adalah parameter yang digunakan untuk menentukan jumlah tetangga terdekat yang akan digunakan dalam proses klasifikasi atau regresi. KNN adalah sebuah algoritma pembelajaran mesin yang digunakan untuk melakukan klasifikasi atau regresi berdasarkan kumpulan data yang ada di sekitarnya. Dalam KNN, ketika akan mengklasifikasikan atau meramalkan label dari sebuah sampel data yang belum diketahui, algoritma mencari _k-nearest neighbors_ dari sampel tersebut berdasarkan jarak _euclidean_ atau metrik jarak lainnya. Jumlah tetangga menentukan berapa banyak tetangga terdekat yang akan digunakan dalam proses ini.
@@ -208,7 +208,15 @@ _Random Forest_ adalah model ensemble yang menggabungkan beberapa pohon keputusa
 
 ## Conclusion
 
+Bank merupakan lembaga intermediasi yang bertugas menerima simpanan dari nasabah dan meminjamkannya kepada nasabah (unit ekonomi) lain yang membutuhkan dana. Atas simpanan masyarakat, bank memberikan imbalan berupa bunga. Demikian pula, atas pemberian pinjaman (kredit) bank mengenakan bunga kepada para peminjam. Kredit disamping memberikan sumbangan terbesar terhadap laba, kredit juga merupakan salah satu faktor yang menyebabkan rapuhnya usaha perbankan yaitu dengan tingginya risiko kredit. Implementasi model klasifikasi risiko kredit yang akurat dapat membantu institusi keuangan mengidentifikasi peluang risiko yang tinggi dan mengambil tindakan yang sesuai untuk mengelola portofolio pinjaman mereka. Dengan memiliki prediksi yang lebih baik tentang risiko kredit, institusi keuangan dapat mengurangi risiko gagal bayar, meningkatkan keuntungan, dan menjaga stabilitas keuangan mereka. Oleh karena itu perlu dikembangkan model klasifikasi dapat memprediksi risiko kredit dengan akurasi, presisi, recall, dan f1-score minimal 88%. Dengan memiliki prediksi yang lebih baik tentang risiko kredit, institusi keuangan dapat mengurangi risiko gagal bayar, meningkatkan keuntungan, dan menjaga stabilitas keuangan mereka.
 
+Adapun ketiga model klasifikasi yang dipilih, yaitu K-Nearest Neighbor (KNN), Random Forest, Boosting Algorithm, dan Support Vector Classifier (SVC). KNN dapat mengidentifikasi pola berdasarkan kemiripan data, Random Forest memiliki kemampuan untuk menangani variabel numerik dan kategorikal serta menghindari overfitting, dan SVC dapat mengatasi masalah data yang tidak linier. Dengan menggunakan kombinasi ketiga model ini, dapat dimanfaatkan keunggulan masing-masing model dan meningkatkan akurasi serta kinerja dalam mengidentifikasi risiko kredit.
+
+Dataset yang digunakan dalam proyek ini adalah Credit Risk Dataset yang berisi informasi tentang data riwayat pinjaman dan status kredit. Dataset ini dapat diunduh dari kaggle. Dataset ini memiliki 12 variabel dan 32581 baris data, dimana variabelnya terdiri dari person_age, person_income, person_home_ownership, person_emp_length, loan_intent, loan_grade, loan_amnt, loan_int_rate, loan_status, loan_percent_income, cb_person_default_on_file, dan cb_preson_cred_hist_length.
+
+Sebelum data digunakan, terlebih dahulu dilakukan tahap dapat data preparation. Pada tahap ini ditemukan bahwa terdapat data yang bernilai null atau tidak valid, oleh karena itu data yang bernilai null atau tidak valid dihapus. selain itu dilakukan pengecekan outlier menggunakan metode IQR, ternyata data mengandung outlier dan dilakukan penghapusan outlier pada data. Selanjutnya dilakukan feature encoding untuk mengubah fitur categorical menjadi representasi numerik yang dapat dipahami oleh algoritma pemodelan. Selain itu pada fitu target loan_status ditemukan terjadi ketidakseimbangan data, dimana nilai sangat jauh lebih banyak dibanding nilai 1. ntuk menyeimbangkan dataset dilakukan oversampling menggunakan metode SMOTE dengan menggandakan sampel pada fitur "loan_status" yang bernilai 1. Selanjutnya pada tahap train-test splitting
+
+Dalam pembentukan model, digunakan empat model untuk mengklasifikasikan loan status, yaitu K-Nearest Neighbor, Random Forest Classifier, dan Support Vector Classifier. Metrik evaluasi yang digunakan dalam proyek ini adalah akurasi, presisi (precision), recall, dan F1-score. Dari hasil evaluasi, dapat dilihat bahwa model klasifikasi yang dibuat sudah baik dan sudah cukup layak digunakan. Ketiga model baik model KNN, Random Forest, dan Support Vector Machine memiliki akurasi, presisi, recall, dan f1-score minimal 88%. Namun dari ketiga model Random Forest (RF) memiliki performa yang lebih baik dibandingkan dengan model KNN dan SVC. Model RF memiliki akurasi yang tinggi, serta precision, recall, dan f1-score yang seimbang baik pada data train maupun test.  
 
 ## Reference
 

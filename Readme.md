@@ -146,8 +146,7 @@ Pada tahap ini digunakan empat model untuk mengklasifikasikan loan status, yaitu
     Nilai _n_jobs_ menentukan berapa banyak pekerjaan yang akan dijalankan secara paralel. Jika _n_jobs_ diatur sebagai -1, maka semua core atau CPU yang tersedia akan digunakan untuk melatih model secara paralel. Jika n_jobs diatur sebagai nilai positif, maka jumlah core atau CPU yang digunakan akan sesuai dengan nilai n_jobs yang ditentukan.
 3. _Support Vector Classifier_
 
-   -SVC
-   Model SVC (Support Vector Classifier) adalah sebuah algoritma pembelajaran mesin yang digunakan untuk melakukan klasifikasi pada data yang terstruktur. SVC adalah salah satu bentuk dari metode Support Vector Machines (SVM) yang populer.
+   -Support Vector Classifier adalah sebuah algoritma pembelajaran mesin yang digunakan untuk melakukan klasifikasi pada data yang terstruktur. SVC adalah salah satu bentuk dari metode Support Vector Machines (SVM) yang populer.
    Pada dasarnya, model SVC membangun sebuah hiperplane dalam ruang fitur (feature space) yang memaksimalkan jarak antara dua kelas data yang berbeda. Hiperplane ini digunakan untuk memisahkan data menjadi dua kelas berdasarkan atribut atau fitur yang diberikan. Tujuan utama dari SVC adalah menemukan hiperplane yang dapat memaksimalkan margin, yaitu jarak terdekat antara hiperplane dan titik-titik data dari kelas yang berbeda.
 
 ## Evaluation

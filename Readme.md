@@ -64,6 +64,8 @@ __Tabel 1 variabel dan deskripsi data.__
 
 ### _Data Cleaning_
 
+__Tabel 2. Data bernilai null sebelum dibersihkan__
+
 |          variabel          | Jumlah Baris yang Berisi Data Null |
 |:--------------------------:|:----------------------------------:|
 | person_age                 |                  0                 |
@@ -79,9 +81,9 @@ __Tabel 1 variabel dan deskripsi data.__
 | cb_person_default_on_file  |                  0                 |
 | cb_preson_cred_hist_length |                  0                 |
 
-__Tabel 2. Data bernilai null sebelum dibersihkan__
-
 Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate sehingga perlu menghapus baris yang bernilai null.
+
+__Tabel 3. Deskripsi data__
 
 |index|person\_age|person\_income|person\_emp\_length|loan\_amnt|loan\_int\_rate|loan\_status|loan\_percent\_income|cb\_person\_cred\_hist\_length|
 |---|---|---|---|---|---|---|---|---|
@@ -93,8 +95,6 @@ Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate 
 |50%|26\.0|55956\.0|4\.0|8000\.0|10\.99|0\.0|0\.15|4\.0|
 |75%|30\.0|80000\.0|7\.0|12500\.0|13\.48|0\.0|0\.23|8\.0|
 |max|144\.0|6000000\.0|123\.0|35000\.0|23\.22|1\.0|0\.83|30\.0|
-
-__Tabel 3. Deskripsi data__
 
 Dari hasil fungsi describe(), nilai minimum untuk kolom "loan_percent_income" adalah 0. "loan_percent_income" merupakan presentase pendapatan tahunan peminjam terhadap cicilan pinjaman sehingga tidak mungkin ada yang bernilai 0 jika tidak ada "loan_amnt" atau jumlah pinjaman yang bernilai 0. Dilakukan pengecekan ada berapa missing value pada kolom "loan_percent_income", terdapat 8 sampel missing value yang merupakan jumlah yang kecil dibandingkan total sampel. Oleh karena itu missing value tersebut dihapus. Setelah baris bernilai 0 dihapus, jumlah sampel atau baris data berubah menjadi 28638.
 
@@ -191,22 +191,22 @@ Rumus:
 
 F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text{{Precision}} + \text{{Recall}}}}$
 
+__Tabel 3. Hasil evaluasi__
+
 | Model | Accuracy Train | Precision Train | Recall Train | F1 Score Train | Accuracy Test | Precision Test | Recall Test | F1 Score Test |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | KNN | 0.93 | 0.95 | 0.90 | 0.92 | 0.91 | 0.93 | 0.89 | 0.91 |
 | RF | 0.98 | 0.99 | 0.96 | 0.98 | 0.95 | 0.99 | 0.91 | 0.95 |
 | SVC | 0.93 | 0.98 | 0.89 | 0.93 | 0.93 | 0.98 | 0.88 | 0.92 |
 
-__Tabel 3. Hasil evaluasi__
-
-## Conclusion
-
-Dalam analisis model berdasarkan evaluasi yang diberikan, terdapat beberapa metrik yang dipertimbangkan, yaitu akurasi (_Accuracy_), presisi (_Precision_), _Recall_, dan _f1-score_. Dari hasil evaluasi, dapat dilihat bahwa model klasifikasi yang dibuat sudah baik dan  sudah cukup layak digunakan. Ketiga model baik model KNN, _Random Forest_, dan _Support Vector Machine_ memiliki akurasi, presisi, recall, dan f1-score minimal 88%.
+Dari hasil evaluasi, dapat dilihat bahwa model klasifikasi yang dibuat sudah baik dan  sudah cukup layak digunakan. Ketiga model baik model KNN, _Random Forest_, dan _Support Vector Machine_ memiliki akurasi, presisi, recall, dan f1-score minimal 88%.
 
 Jika fokus pada akurasi, model _Random Forest_ (RF) memiliki akurasi tertinggi pada data train dan data test. Ini menunjukkan kemampuan model untuk secara konsisten melakukan klasifikasi yang akurat pada data _train_ dan _test_. Jika kita mempertimbangkan presisi dan _recall_ pada data _train_ dan data _test_, _Random Forest_ memiliki nilai presisi dan _recall_ yang seimbang baik pada data latih maupun data uji. Dalam konteks klasifikasi risiko kredit, penting untuk memiliki presisi yang tinggi (menghindari banyak kesalahan positif) dan recall yang tinggi (menghindari banyak kesalahan negatif). RF memberikan keseimbangan yang baik antara kedua metrik ini.
 Selain itu, _Random Forest juga_ memiliki nilai _f1-score_ yang paling tinggi. _F1-Score_ menggabungkan presisi dan _recall_ menjadi satu metrik. RF memberikan skor _F1-Score_ yang baik pada data latih maupun data uji, menunjukkan kemampuannya dalam mengklasifikasikan risiko kredit secara akurat dan seimbang.
 
 _Random Forest_ adalah model ensemble yang menggabungkan beberapa pohon keputusan. Kelebihan dari model ensemble adalah kemampuannya dalam menangani kompleksitas data dan mengurangi _overfitting_. Dalam klasifikasi risiko kredit, di mana terdapat banyak faktor yang mempengaruhi keputusan, model _ensemble_ seperti RF dapat memberikan performa yang lebih baik daripada model lain yang lebih sederhana. Oleh karena itu lebih baik untuk menggunakan model _Random Forest_ untuk membuat model _machine learning_ klasifikasi yang dapat digunakan untuk mengidentifikasi risiko kredit.
+
+## Conclusion
 
 ## Reference
 

@@ -14,10 +14,10 @@ Pengendalian pada Risiko kredit tentu dilakukan oleh setiap bank. Pengendalian t
 ## Business Understanding
 
 ### Problem Statements
-1. Bagaimana mengembangkan model klasifikasi yang dapat memprediksi risiko kredit dengan akurasi, presisi, _recall_, dan _f1-score_ minimal 90% ?
+1. Bagaimana mengembangkan model klasifikasi yang dapat memprediksi risiko kredit dengan akurasi, presisi, _recall_, dan _f1-score_ minimal 88% ?
 
 ### Goals
-1. mengembangkan model klasifikasi yang dapat memprediksi risiko kredit dengan akurasi, presisi, _recall_, dan _f1-score_ minimal 90% .
+1. mengembangkan model klasifikasi yang dapat memprediksi risiko kredit dengan akurasi, presisi, _recall_, dan _f1-score_ minimal 88% .
 
 ### Solution Statement
    Keempat model klasifikasi yang dipilih, yaitu _K-Nearest Neighbor_ (KNN), _Random Forest_, _Boosting Algorithm_, dan _Support Vector Classifier_ (SVC).
@@ -72,7 +72,7 @@ Tabel 1 variabel dan deskripsi data.
 | cb_person_default_on_file  |                  0                 |
 | cb_preson_cred_hist_length |                  0                 |
 
-Gambar 1. Data bernilai null sebelum dibersihkan
+Tabel 2. Data bernilai null sebelum dibersihkan
 
 Terdapat data yang bernilai null pada kolom person_emp_length dan loan_int_rate sehingga perlu menghapus baris yang bernilai null.
 

@@ -192,7 +192,7 @@ F1-Score = $\frac{{2 \times (\text{{Precision}} \times \text{{Recall}})}}{{\text
 
 __Tabel 3. Hasil evaluasi__
 
-### Kesimpulan
+## Conclusion
 
 Dalam analisis model berdasarkan evaluasi yang diberikan, terdapat beberapa metrik yang dipertimbangkan, yaitu akurasi (_Accuracy_), presisi (_Precision_), _Recall_, dan _f1-score_.
 

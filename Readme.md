@@ -57,8 +57,20 @@ Tabel 1 variabel dan deskripsi data.
 ### _Data Cleaning_
 
 
-<img width="421" alt="data cleaning" src="https://github.com/novandristnjk/laporan-ml-terapan/assets/110597813/a09efac0-1b08-4e8b-8a3e-939ffccf6701">
-
+|          variabel          | Jumlah Baris yang Berisi Data Null |
+|:--------------------------:|:----------------------------------:|
+| person_age                 |                  0                 |
+| person_income              |                  0                 |
+| person_home_ownership      |                  0                 |
+| person_emp_length          |                 895                |
+| loan_intent                |                  0                 |
+| loan_grade                 |                  0                 |
+| loan_amnt                  |                  0                 |
+| loan_int_rate              |                3116                |
+| loan_status                |                  0                 |
+| loan_percent_income        |                  0                 |
+| cb_person_default_on_file  |                  0                 |
+| cb_preson_cred_hist_length |                  0                 |
 
 Gambar 1. Data bernilai null sebelum dibersihkan
 

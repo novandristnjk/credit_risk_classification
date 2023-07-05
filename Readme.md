@@ -33,7 +33,7 @@ Pengendalian pada Risiko kredit tentu dilakukan oleh setiap bank. Pengendalian t
  Dengan menggunakan kombinasi ketiga model ini, dapat dimanfaatkan keunggulan masing-masing model dan meningkatkan akurasi serta kinerja dalam mengidentifikasi risiko kredit.
 
 ## Data Understanding
-Data yang digunakan dalam proyek ini adalah dataset Credit Risk yang berisi informasi tentang pengajuan pinjaman dan status kredit. Dataset ini dapat diunduh dari [kaggle](https://www.kaggle.com/datasets/laotse/credit-risk-dataset).
+Dataset yang digunakan dalam proyek ini adalah Credit Risk Dataset yang berisi informasi tentang data riwayat pinjaman dan status kredit. Dataset ini dapat diunduh dari [kaggle](https://www.kaggle.com/datasets/laotse/credit-risk-dataset). Dataset ini memiliki 12 variabel dan 28638 baris data, berikut variabel-variabel yang terdapat pada dataset.
 
 | Variabel | Deskripsi |
 |-----|-----------|
